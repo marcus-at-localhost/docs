@@ -8,3 +8,8 @@ sudo apt-get install php-mysql php-json php-gd php-zip php-imap php-mbstring php
 sudo phpenmod imap mbstring
 sudo service apache2 restart
 ```
+In the main configuration of Apache2 please set the option
+```
+AllowOverride All
+```
+to make the Apache2 work.
