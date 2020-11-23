@@ -8,11 +8,11 @@ The data exporting feature comes with the AtroCore system out of the box and is 
 
 Open any entity list view page, select the desired record(s) and click the `Export` option in the mass actions menu:
 
-![Export option](../../_assets/export/export-option.jpg)
+![Export option](../../_assets/user-guide/export/export-option.jpg)
 
 The following setup pop-up will appear:
 
-![Export setup](../../_assets/export/export-setup.jpg)
+![Export setup](../../_assets/user-guide/export/export-setup.jpg)
 
 Here you can select the export file format (XLSX or CSV) from the drop-down list, and define the fields to be exported or select the `Export all fields` option to export all fields available in the given entity.
 
@@ -26,7 +26,7 @@ To start exporting the data, click the `Export` button in the setup pop-up – t
 
 By default, data export is enabled for all AtroCore users. However, export permissions can be disabled by the administrator. In this case, the `Export` option will not be shown in the mass actions menu:
 
-![Export option disabled](../../_assets/export/export-option-disabled.jpg)
+![Export option disabled](../../_assets/user-guide/export/export-option-disabled.jpg)
 
 > To get the data export ability back, please, contact your administrator.
 
