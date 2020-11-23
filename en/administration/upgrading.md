@@ -12,17 +12,17 @@ Steps to upgrade your AtroCore using UI:
 
     There you can get current version of system and available versions for upgrade with detail information about them.
         
-    ![upgrade_page_available](../../_assets/upgrading/upgrade_page_available_en.png)
+    ![upgrade_page_available](../../_assets/administration/upgrading/upgrade_page_available_en.png)
         
     If your version of AtroCore is up-to-date you will get a corresponding message.
             
-    ![upgrade_page_updated](../../_assets/upgrading/upgrade_page_upgdated_en.png)
+    ![upgrade_page_updated](../../_assets/administration/upgrading/upgrade_page_upgdated_en.png)
     
 2. Run upgrade
 
     Click "Upgrade" button to start upgrade process of your AtroCore system. When process started you can view real time upgrade information in logs.
 
-    ![upgrade_page_logs](../../_assets/upgrading/upgrade_page_logs_en.png)
+    ![upgrade_page_logs](../../_assets/administration/upgrading/upgrade_page_logs_en.png)
 
     After successful upgrading current user will be logout from system.
 
