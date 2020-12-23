@@ -11,6 +11,10 @@ sudo service nginx restart
 
 Please update your nginx configuration with the following:
 ```
+server {
+  ...
+  client_max_body_size 200M;
+
   location ~ (composer\.json)$ {
     deny all;
   }
@@ -43,4 +47,5 @@ Please update your nginx configuration with the following:
     index index.html;
     try_files $uri $uri/ /apidocs/index.html;
   }
+}  
 ```
