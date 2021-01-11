@@ -33,10 +33,5 @@ server {
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
   }
   
-  location /apidocs {
-    root   html;
-    index index.html;
-    try_files $uri $uri/ /apidocs/index.html;
-  }
 }  
 ```
