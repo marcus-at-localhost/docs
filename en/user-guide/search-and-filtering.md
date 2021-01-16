@@ -11,14 +11,35 @@ Search and filtering allow you to quickly focus on the records you want to see. 
 
 To perform a search operation, enter your search query into the corresponding field and hit the `Enter` key on your keyboard or click the `Search` button.
 
-Wildcards can be used for search, separately or in any combination. Use a wildcard character in place of characters you do not require in your search. 
+Wildcards can be used for search, at any place in the search string, separately or in any combination.
 
 | **Character**    | **Use**                                           |
 | :--------------- | :------------------------------------------------ |
-| %                | Matches any number of characters, including zero  |
+| % or *           | Matches any number of characters, including zero  |
 | _                | Matches only one character                        |
 
 > Please consider, only the fields configured by the Administrator at "Text Filter Fields" for the current entity will be searched through.
+
+## Full-text Search
+
+> Fulltext search can be used if configured by the Administrator for the current entity.
+
+In Global Search full-text search is always applied for entities with enabled full-text search.
+
+If activated for the entity the full-text search is also applied when you search in the list view. Though it can be skipped for some search queries. Yet, it's possible to force a full-text usage by using prefix "ft:" in your search query, eg "ft: john".
+
+For InnoDB tables the following operators are available:
+
+| **Character**    | **Use**                                           |
+| :--------------- | :------------------------------------------------ |
+| +                | A leading plus sign indicates that this word must be present.        |
+| -                | A leading minus sign indicates that this word must not be present.   |
+| *                | Wildcard operator can be appended to the word to be affected.        |
+| "                | A phrase included in double quotes must be contained exactly as it was typed.|
+| (no operator)    | The word is optional, but the rows that contain it are rated higher. |
+ 
+> Please note, that MySQL option ft_min_word_len defines min word length available for full-text search. By default it's 4. If you change this paramater, you need also to set the `fullTextSearchMinLength` parameter at data/config.php: `'fullTextSearchMinLength' => 3`. MySQL has a blacklist of words that are not available for full-text search. E.g. test, hello.
+
 
 ## Filtering
 
