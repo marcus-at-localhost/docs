@@ -1,5 +1,7 @@
 # Search and Filtering
 
+Use the [global search](./user-interface.md#global-search) if you wish to search globally across all the entities in the system. The entities and fields available for searching can be configured by the Adminitrator.
+
 Searching works on the current entity records, while filtering works also on the related records, which are configured by the administrator.
 
 ## List View Search
@@ -38,8 +40,7 @@ For InnoDB tables the following operators are available:
 | "                | A phrase included in double quotes must be contained exactly as it was typed.|
 | (no operator)    | The word is optional, but the rows that contain it are rated higher. |
  
-> Please note, that MySQL option ft_min_word_len defines min word length available for full-text search. By default it's 4. If you change this paramater, you need also to set the `fullTextSearchMinLength` parameter at data/config.php: `'fullTextSearchMinLength' => 3`. MySQL has a blacklist of words that are not available for full-text search. E.g. test, hello.
-
+> Please note, that MySQL option ft_min_word_len defines min word length available for full-text search. By default it's 4. If you change this paramater, you need also to set the `fullTextSearchMinLength` parameter at data/config.php: `'fullTextSearchMinLength' => 3`. MySQL has a blacklist of words that are not available for full-text search. 
 
 ## Filtering
 
@@ -49,17 +50,12 @@ To filter your entity records, open the filter drop-down list and set the desire
 
 To clear all filters, click the `Reset` button, located to the right of the search field.
 
-Use the [global search](./user-interface.md#global-search) if you wish to search globally across all the entities in the system.
-
-The fields available for searching can be configured by developers in the metadata of the appropriate entity.
-
 You can have one or more filters based on a certain field for all field types. The exception is field types that can be used as a filter only once (because there is no need for it), which are:
   - Boolean;
   - Array;
   - Multi-enum;
   - Enum;
   - Related entities.
-
 
 ### Logical Operators
 
