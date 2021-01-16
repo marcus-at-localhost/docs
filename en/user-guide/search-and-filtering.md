@@ -1,6 +1,15 @@
 # Search and Filtering
 
+Searching works on the current entity records, while filtering works also on the related records, which are configured by the administrator.
+
 ## List View Search
+
+Search and filtering allow you to quickly focus on the records you want to see. These sections are automatically available on each entity [list](./views-and-panels-core.md#list-view) view page:
+
+![Search and filtering](../../_assets/user-guide/search-and-filtering/search-filter.jpg)
+*Search and filtering on the custom entities list view page*
+
+To perform a search operation, enter your search query into the corresponding field and hit the `Enter` key on your keyboard or click the `Search` button.
 
 Wildcards can be used for search, separately or in any combination. Use a wildcard character in place of characters you do not require in your search. 
 
@@ -9,14 +18,9 @@ Wildcards can be used for search, separately or in any combination. Use a wildca
 | %                | Matches any number of characters, including zero  |
 | _                | Matches only one character                        |
 
-Search and filtering allow you to quickly focus on the records you want to see. These sections are automatically available on each entity [list](./views-and-panels-core.md#list-view) view page:
+> Please consider, only the fields configured by the Administrator at "Text Filter Fields" for the current entity will be searched through.
 
-![Search and filtering](../../_assets/user-guide/search-and-filtering/search-filter.jpg)
-*Search and filtering on the custom entities list view page*
-
-Searching works on the current entity records, while filtering works also on the related records, which are configured by the administrator.
-
-To perform a search operation, enter your search query into the corresponding field and hit the `Enter` key on your keyboard or click the `Search` button.
+## Filtering
 
 To filter your entity records, open the filter drop-down list and set the desired checkbox(es):
 
@@ -35,11 +39,8 @@ You can have one or more filters based on a certain field for all field types. T
   - Enum;
   - Related entities.
 
-## Filtering
 
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-
-## Logical Operators
+### Logical Operators
 
 The system behavior is different for the OR and AND logical operators:
 
@@ -48,7 +49,7 @@ The system behavior is different for the OR and AND logical operators:
 
 Logical operator NOR is directly not available, but can be set by defining specific filter criteria for almost each field type.
 
-## Available Filtering Criteria
+### Available Filtering Criteria
 
 Depending of the field type, you can apply the following filtering criteria:
 
@@ -117,7 +118,7 @@ Depending of the field type, you can apply the following filtering criteria:
 | *Image, File, Attachment Multiple*          | –                      | Filtering for these field types is not possible  (for now) |
 
 
-## Predefined Search Filters
+### Predefined Search Filters
 
 Predefined search filters are available in the drop-down menu on the left of the search field on any entity list view page:
 
@@ -127,7 +128,7 @@ To filter the records, select the desired checkbox or several checkboxes.
 
 To extend the list, please contact your developer.
 
-## Custom Search Filters
+### Using Custom Search Filters
 
 To save a custom search filter, select the `Add filter > 'desired filter'` option from the filtering drop-down list:
 
@@ -141,7 +142,7 @@ If needed, click the `X` button to remove the added filter.
 
 > To extend the list of fields to be used for filtering, please, contact your administrator.
 
-## Templates
+### Saving Custom Search Filters
 
 You can create custom search filter templates. To do this, add the desired filters as described above and select the `Save filter` option from the filtering drop-down list:
 
