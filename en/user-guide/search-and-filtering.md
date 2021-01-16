@@ -1,5 +1,14 @@
 # Search and Filtering
 
+## List View Search
+
+Wildcards can be used for search, separately or in any combination. Use a wildcard character in place of characters you do not require in your search. 
+
+| **Character**    | **Use**                                           |
+| :--------------- | :------------------------------------------------ |
+| %                | Matches any number of characters, including zero  |
+| _                | Matches only one character                        |
+
 Search and filtering allow you to quickly focus on the records you want to see. These sections are automatically available on each entity [list](./views-and-panels-core.md#list-view) view page:
 
 ![Search and filtering](../../_assets/user-guide/search-and-filtering/search-filter.jpg)
@@ -25,6 +34,10 @@ You can have one or more filters based on a certain field for all field types. T
   - Multi-enum;
   - Enum;
   - Related entities.
+
+## Filtering
+
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
 ## Logical Operators
 
@@ -103,23 +116,6 @@ Depending of the field type, you can apply the following filtering criteria:
 |                                             | None Of                | Related entity records, multiselect                        |
 | *Image, File, Attachment Multiple*          | –                      | Filtering for these field types is not possible  (for now) |
 
-## Automatic Search Mask Recognition *(in development)*
-
-AtroPIM has automatic search mask recognition. This can be considered as a quick search function, i.e. when you start typing, AtroPIM automatically determines the search mask type of your search string. Automatic search mask recognition is available for the following fields: Text, Number, Date, and Time.
-
-Depending on the search mask type, the system searches through all entity fields of the appropriate field type. A pop-up with auto-suggestions appears with the information about field name and amount of search results for this field, i.e. "Address: 3 results", and the text link(s) to show the results.
-
-If nothing is chosen from the auto-suggesting pop-up, click the magnifier icon to perform normal search (only through the fields listed in the metadata for this entity).
-
-After clicking on the search results, the appropriate filter will be set automatically and the search field will be left empty.
-
-|   **Search Mask Type**  |        **Field Types to Be Searched**        | **Applied Filter Criteria** |
-|:-----------------------|:--------------------------------------------|:---------------------------|
-| Теxt, e.g. "atro 123"   | Address, Number, Varchar, Text, URL, Wysiwyg | Starts with                 |
-| %Text, e.g. "%atro 123" | Address, Number, Varchar, Text, URL, Wysiwyg | Consists                    |
-| Numbers, e.g. "123"     | Address, Number, Varchar, Text, URL, Wysiwyg | Starts with                 |
-| Numbers, e.g. "123"     | Auto-increment, Currency, Integer, Float     | Is                          |
-| Date, e.g. "12.12.2018" | Date, DateTime                               | On                          |
 
 ## Predefined Search Filters
 
@@ -160,4 +156,22 @@ To remove your custom search filter template, use the `Remove filter` option fro
 ![Remove filter option](../../_assets/user-guide/search-and-filtering/remove-filter-option.jpg)
 
 To complete the action, confirm your decision in the confirmation box that appears on top of the page.
+
+## Automatic Search Mask Recognition *(in development)*
+
+AtroPIM has automatic search mask recognition. This can be considered as a quick search function, i.e. when you start typing, AtroPIM automatically determines the search mask type of your search string. Automatic search mask recognition is available for the following fields: Text, Number, Date, and Time.
+
+Depending on the search mask type, the system searches through all entity fields of the appropriate field type. A pop-up with auto-suggestions appears with the information about field name and amount of search results for this field, i.e. "Address: 3 results", and the text link(s) to show the results.
+
+If nothing is chosen from the auto-suggesting pop-up, click the magnifier icon to perform normal search (only through the fields listed in the metadata for this entity).
+
+After clicking on the search results, the appropriate filter will be set automatically and the search field will be left empty.
+
+|   **Search Mask Type**  |        **Field Types to Be Searched**        | **Applied Filter Criteria** |
+|:-----------------------|:--------------------------------------------|:---------------------------|
+| Теxt, e.g. "atro 123"   | Address, Number, Varchar, Text, URL, Wysiwyg | Starts with                 |
+| %Text, e.g. "%atro 123" | Address, Number, Varchar, Text, URL, Wysiwyg | Consists                    |
+| Numbers, e.g. "123"     | Address, Number, Varchar, Text, URL, Wysiwyg | Starts with                 |
+| Numbers, e.g. "123"     | Auto-increment, Currency, Integer, Float     | Is                          |
+| Date, e.g. "12.12.2018" | Date, DateTime                               | On                          |
 
