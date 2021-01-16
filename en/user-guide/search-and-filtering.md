@@ -15,7 +15,7 @@ To filter your entity records, open the filter drop-down list and set the desire
 
 To clear all filters, click the `Reset` button, located to the right of the search field.
 
-Use the [global search](./user-interface-core.md#global-search) if you wish to search globally across all the entities in the system.
+Use the [global search](./user-interface.md#global-search) if you wish to search globally across all the entities in the system.
 
 The fields available for searching can be configured by developers in the metadata of the appropriate entity.
 
