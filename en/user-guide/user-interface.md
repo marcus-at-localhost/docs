@@ -52,7 +52,7 @@ You can [search](./search-and-filtering-core.md) all the records existing in the
 
 > The list of entities available for search is configured by the administrator in the `Administration > System > Settings > Global Search Entity List`. Please consider, only the fields configured at "Text Filter Fields" for each entity will be searched through.
 
-Wildcards can be used for search, separately or in any combination. Use a wildcard character in place of characters you do not require in your search. 
+Wildcards can be used for search, separately or in any combination.
 
 | **Character**    | **Use**                                           |
 | :--------------- | :------------------------------------------------ |
