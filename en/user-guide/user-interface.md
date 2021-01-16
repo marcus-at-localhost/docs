@@ -38,7 +38,7 @@ Taskbar is a top panel of the AtroCore user interface:
 
 ![Taskbar](../../_assets/user-guide/user-interface/taskbar.jpg)
 
-A taskbar consists of a [global search](#global-search) field and some functional icons that help you work and collaborate within the AtroPIM system, namely:
+A taskbar consists of a [search](#global-search) field and some functional icons that help you work and collaborate within the AtroPIM system, namely:
 - [Desktop notifications](#desktop-notifications); 
 - [Queue Manager](#queue-manager);
 - [Quick create](#quick-create);
@@ -50,7 +50,14 @@ You can [search](./search-and-filtering-core.md) all the records existing in the
 
 ![Global Search](../../_assets/user-guide/user-interface/global-search.jpg)
 
-> The list of entities available for search is configured by the administrator.
+> The list of entities available for search is configured by the administrator in the `Administration > System > Settings > Global Search Entity List`. Please consider, only the fields configured at "Text Filter Fields" for each entity will be searched through.
+
+Wildcards can be used to search, separate or in any combination. Use a wildcard character in place of characters you do not require in your search. 
+
+| **Character**    | **Use**                                           |
+| :--------------- | :------------------------------------------------ |
+| %                | Matches any number of characters, including zero  |
+| _                | Matches only one character                        |
 
 ### Desktop Notifications
 
