@@ -1,5 +1,5 @@
 # Apache server configuration
-Note that all configuration settings listed here are made on Ubuntu server.
+> all configuration settings listed here are made on Ubuntu server.
 
 ### PHP requirements
 To install all necessary libraries, run these commands in the terminal:
