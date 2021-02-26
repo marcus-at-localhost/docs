@@ -28,7 +28,7 @@ To enable .htaccess support, add/edit the server configuration settings `/etc/ap
 AllowOverride All
 </Directory>
 ```
-Here an example of the server configuration settings:
+Here an **example** of the server configuration settings:
 ```
 <VirtualHost *:80>
 ServerName atropim.local
