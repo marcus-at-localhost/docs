@@ -1,7 +1,7 @@
 # Nginx server configuration
 > all configuration settings listed here are made on Ubuntu server.
 
-### PHP requirements
+## 1. Install all necessary PHP libraries
 To install all necessary libraries, run these commands in the terminal:
 ```
 sudo apt-get update
@@ -10,16 +10,16 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
-### Configuring a Virtual Host on Nginx
+## 2. Configure a Virtual Host on Nginx
 To create this file, open a terminal and run the command:
 ```
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/atropim.conf
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/atrocore.conf
 ```
-Open this file (`/etc/nginx/sites-available/atropim.conf`) and modify the code following the format printed below (some settings may be different based on your configuration):
+Open this file (`/etc/nginx/sites-available/atrocore.conf`) and modify the code following the format printed below (some settings may be different based on your configuration):
 ```
 server {
   listen 80;
-  root /var/www/atropim.local; ## Specify your document root
+  root /var/www/atrocore.local; ## Specify your document root
   server_name apropim.local;  ## Replace apropim.local to your domain name
   server_tokens off; ## Don't show the nginx version number
   index index.php index.html;
@@ -55,9 +55,8 @@ server {
   }
   
 }
-
 ```
-Afterward, restart nginx:
+## 3. Restart Nginx
 ```
 sudo service nginx restart
 ```
