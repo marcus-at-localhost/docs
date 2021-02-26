@@ -6,7 +6,7 @@
 sudo apt install apache2
 ```
 
-## 2. Install PHP and libraries
+## 2. Install libraries
 To install all necessary libraries, run these commands in the terminal:
 ```
 sudo apt-get update
