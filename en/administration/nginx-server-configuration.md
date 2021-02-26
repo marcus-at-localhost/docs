@@ -1,5 +1,6 @@
 # Nginx server configuration
-> all configuration settings listed here are made on Ubuntu server.
+
+> All configuration settings listed here are made on Ubuntu server.
 
 ## 1. Install all necessary PHP libraries
 To install all necessary libraries, run these commands in the terminal:
