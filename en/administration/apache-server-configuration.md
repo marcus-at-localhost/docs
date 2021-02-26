@@ -10,9 +10,8 @@ sudo phpenmod imap mbstring
 sudo service apache2 restart
 ```
 
-### Fixing the 404 on install page
+### Fixing the empty page (with 404 code response) when you are trying to install AtroCore via browser
 When you are trying to install AtroCore via browser, you may get an empty page with 404 code response.
-
 To fix it, try the following steps one by one. After each step check if the issue is solved. If it works, then further steps are not needed.
 
 ##### 1. Enable mod_rewrite support for Apache
