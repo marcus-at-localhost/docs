@@ -47,6 +47,7 @@ server {
     rewrite ^/(.*)$ /index.php?treoq=$1;
   }
 
+  # Specify your PHP (php-cgi or php-fpm) based on your configuration
   location ~ \.php$ {
     try_files $fastcgi_script_name =404;
     fastcgi_keep_conn on;
