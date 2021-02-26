@@ -10,11 +10,20 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
-### Enable rewrite rules in Nginx server
-Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside server block:
+### Configuring a Virtual Host on Nginx
+To create this file, open a terminal and run the command:
+```
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/atropim.conf
+```
+Open this file (`/etc/nginx/sites-available/atropim.conf`) and modify the code following the format printed below (some settings may be different based on your configuration):
 ```
 server {
-  # ...
+  listen 80;
+  root /var/www/atropim.local; ## Specify your document root
+  server_name apropim.local;  ## Replace apropim.local to your domain name
+  server_tokens off; ## Don't show the nginx version number
+  index index.php index.html;
+  resolver 172.17.0.1 valid=60s ipv6=off;
 
   client_max_body_size 50M;
   
