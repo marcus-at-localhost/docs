@@ -57,3 +57,7 @@ server {
 }
 
 ```
+Afterward, restart nginx:
+```
+sudo service nginx restart
+```
