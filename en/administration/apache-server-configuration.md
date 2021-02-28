@@ -2,8 +2,9 @@
 > All settings listed here are made on an Ubuntu server.
 
 ## 1. Install Apache Web Server
+(if you have not done if before)
 ```
-sudo apt install apache2
+sudo apt-get install apache2
 ```
 
 ## 2. Install libraries
