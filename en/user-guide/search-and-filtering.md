@@ -4,7 +4,7 @@ Use the [global search](./user-interface.md#global-search) if you wish to search
 
 Searching works on the current entity records, while filtering works also on the related records, which are configured by the administrator.
 
-## List View Search
+## Search
 
 Search and filtering allow you to quickly focus on the records you want to see. These sections are automatically available on each entity [list](./views-and-panels-core.md#list-view) view page:
 
@@ -22,7 +22,7 @@ Wildcards can be used for search, at any place in the search string, separately 
 
 > Please consider, only the fields configured by the Administrator at "Text Filter Fields" for the current entity will be searched through.
 
-## Full-text Search
+### Full-text Search
 
 > Fulltext search can be used if configured by the Administrator for the current entity.
 
