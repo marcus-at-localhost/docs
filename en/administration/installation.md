@@ -1,4 +1,4 @@
-# Installation
+# Installation Guide
 
 > Installation guide is based on **Ubuntu**. Of course, you can use any unix-based system, but make sure that your OS supports the following commands.<br/>
 
