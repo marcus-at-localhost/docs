@@ -41,6 +41,8 @@ crontab -e -u www-data
 
 V. Create MySQL database and user. User must have all privileges for database. You can create database and user with all privileges by executing next few commands:
 
+> If MySQL Database is not installed, you need to install it.
+
 Connect to mysql:
 ```
 mysql -u root -p
