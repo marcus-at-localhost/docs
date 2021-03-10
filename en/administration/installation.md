@@ -17,20 +17,19 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
    >**webserver_user** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
 #### 3. Change the permissions for project files: 
-   ```
+   
     find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
     find data custom upload -type d -exec chmod 775 {} + && find data custom upload -type f -exec chmod 664 {} +
-   ```
-   
+      
 #### 4. Configure the crontab as described below.
 
-   4.1. Run the following command:
+   ##### 4.1. Run the following command:
       
-      crontab -e -u webserver_user
+    crontab -e -u webserver_user
       
-   4.2. Add the following configuration:
+   ##### 4.2. Add the following configuration:
       
-      * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
+    * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
       
 #### 5. Create MySQL database and user. User must have all privileges for database. You can create database and user with all privileges by executing next few commands:
  
@@ -48,6 +47,5 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
    ALTER USER atrocore_user@localhost IDENTIFIED BY 'atrocore_password';
    GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
    ```
-
-
+   
 #### 6. Go to http://YOUR_PROJECT/ to start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
