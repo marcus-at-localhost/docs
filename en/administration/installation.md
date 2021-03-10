@@ -50,4 +50,4 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
    ```
 
 
-### 6. Go to http://YOUR_PROJECT/ to start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
+#### 6. Go to http://YOUR_PROJECT/ to start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
