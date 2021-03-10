@@ -12,9 +12,9 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
    
 #### 2. Change recursively the user and group ownership for project files: 
    ```
-   chown -R webserver_user:webserver_user my-atrocore-project/
+   chown -R www-data:www-data my-atrocore-project/
    ```
-   >**webserver_user** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
+   >**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
 #### 3. Change the permissions for project files: 
    
