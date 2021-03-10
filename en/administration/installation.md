@@ -6,9 +6,8 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
 
 Before you start configure your web server:
 
-[Nginx server configuration](https://github.com/atrocore/atrocore-docs/edit/master/en/administration/installation.md)
-
-[Apache server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/apache-server-configuration.md)
+- [Nginx server configuration](https://github.com/atrocore/atrocore-docs/edit/master/en/administration/installation.md)
+- [Apache server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/apache-server-configuration.md)
 
 After you have configured your web server you may start to install the Application.
 
