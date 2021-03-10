@@ -5,16 +5,16 @@
 To create your new AtroCore application, first make sure you're using PHP 7.1 or above and have [Composer](https://getcomposer.org/download/) installed.
 
 1. Create your new project by running:
-   ```
-   composer create-project atrocore/skeleton-pim my-atrocore-project
-   ```
-   > **my-atrocore-project** – project name
+```
+composer create-project atrocore/skeleton-pim my-atrocore-project
+```
+> **my-atrocore-project** – project name
    
 2. Change recursively the user and group ownership for project files: 
-   ```
-   chown -R www-data:www-data my-atrocore-project/
-   ```
-   >**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
+```
+chown -R www-data:www-data my-atrocore-project/
+```
+>**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
 3. Change the permissions for project files: 
    
