@@ -26,7 +26,7 @@ chown -R www-data:www-data my-atrocore-project/
 ## 3. Change the permissions for project files
 ```
 find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
-find data custom upload -type d -exec chmod 775 {} + && find data custom upload -type f -exec chmod 664 {} +
+find client data custom upload -type d -exec chmod 775 {} + && find client data custom upload -type f -exec chmod 664 {} +
 ```     
 ## 4. Configure the crontab
 
