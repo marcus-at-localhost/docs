@@ -4,6 +4,12 @@
 
 To create your new AtroCore application, first make sure you're using PHP 7.1 or above and have [Composer](https://getcomposer.org/download/) installed.
 
+Before you start configure your web server:
+[Nginx server configuration](https://github.com/atrocore/atrocore-docs/edit/master/en/administration/installation.md)
+[Apache server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/apache-server-configuration.md)
+
+After you have configured your web server you may start to install the Application.
+
 1. Create your new project by running:
 ```
 composer create-project atrocore/skeleton-pim my-atrocore-project
@@ -48,5 +54,5 @@ CREATE USER atrocore_user@localhost;
 ALTER USER atrocore_user@localhost IDENTIFIED BY 'atrocore_password';
 GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
 ```
-   
+
 6. Go to http://YOUR_PROJECT/ to start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
