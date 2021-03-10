@@ -45,7 +45,7 @@ User must have all privileges for database. You can create database and user wit
 
 > If MySQL Database is not installed, you need to install it.
 
-Connect to MySQL:
+Connect to MySQL as a root user:
 ```
 mysql -u root -p
 ```
