@@ -45,11 +45,11 @@ User must have all privileges for database. You can create database and user wit
 
 > If MySQL Database is not installed, you need to install it.
 
-Connect to mysql:
+Connect to MySQL:
 ```
 mysql -u root -p
 ```
-Create database **atrocore**:
+Create the database **atrocore**:
 ```
 CREATE DATABASE atrocore;
 ```
