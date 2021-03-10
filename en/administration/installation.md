@@ -25,7 +25,7 @@ To create your new AtroCore application, first make sure you're using PHP 7.1 or
 
    ##### 4.1. Run the following command:
       
-    crontab -e -u webserver_user
+    crontab -e -u www-data
       
    ##### 4.2. Add the following configuration:
       
