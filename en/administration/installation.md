@@ -11,11 +11,16 @@ Before you start you need to configure your web server:
 
 After you have configured your web server you may start to install the Application.
 
-## 1. Create your new project by running
+## 1. Go to your project dir
 ```
-git clone https://github.com/atrocore/skeleton-pim.git my-atrocore-project && cd my-atrocore-project && php composer.phar update
+cd /var/www/my-atrocore-project
 ```
 > **my-atrocore-project** – project name
+
+## 2. Create your new project by running
+```
+git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar update
+```
    
 ## 2. Change recursively the user and group ownership for project files
 ```
