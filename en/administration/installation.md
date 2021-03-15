@@ -2,7 +2,7 @@
 
 > Installation guide is based on **Ubuntu**. Of course, you can use any unix-based system, but make sure that your OS supports the following commands.<br/>
 
-To create your new AtroCore application, first make sure you're using PHP 7.1 or above and have [Composer](https://getcomposer.org/download/) installed.
+To create your new AtroCore application, first make sure you're using PHP 7.1 or above.
 
 Before you start you need to configure your web server:
 
