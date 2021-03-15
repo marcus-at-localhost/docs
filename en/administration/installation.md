@@ -13,7 +13,7 @@ After you have configured your web server you may start to install the Applicati
 
 ## 1. Create your new project by running
 ```
-composer create-project atrocore/skeleton-pim my-atrocore-project
+git clone https://github.com/atrocore/skeleton-pim.git my-atrocore-project && cd my-atrocore-project && php composer.phar update
 ```
 > **my-atrocore-project** – project name
    
