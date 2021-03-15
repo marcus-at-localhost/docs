@@ -19,9 +19,9 @@ cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project
 
 ## 2. Download project files
 
-> git may be used for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application without having `git` -- please see the chapter 2.6.
+> Git may be used for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application without having `git` - please see the chapter 2.6 for it.
 
-> It is essential because of stability reasons, that you use the conposer version, which is embedded in our software. That is why `php composer.phar update` is used.
+> It is essential because of stability reasons, that you use the composer version, which is embedded in our software. That is why `php composer.phar update` is used.
 
 ### 2.1. If you want to install AtroPIM and AtroDAM with demo data
 
