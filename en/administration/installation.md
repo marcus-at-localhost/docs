@@ -19,7 +19,7 @@ cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project
 
 ## 2. Download project files
 
-> git is required for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application, if you have no git installed, plese see 2.6.
+> git is required for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application, if you have no git installed, please see the chapter 2.6.
 
 > It is essential because of stability reasons, that you use the conposer version, which is embedded in our software. That is why `php composer.phar update` is used.
 
