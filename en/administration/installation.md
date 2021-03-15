@@ -25,7 +25,7 @@ git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar up
    
 ## 3. Change recursively the user and group ownership for project files
 ```
-chown -R www-data:www-data my-atrocore-project/
+chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
 >**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
