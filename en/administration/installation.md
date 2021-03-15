@@ -11,40 +11,41 @@ Before you start you need to configure your web server:
 
 After you have configured your web server you may start to install the Application.
 
-## 1. Go to your project dir
+## 1. Create your project dir
 ```
-cd /var/www/my-atrocore-project
+cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project 
 ```
 > **my-atrocore-project** – project name
 
-## 2. Create your new project by running
+## 2. Download project files
 ```
 git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar update
 ```
+> git is required for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed
    
-## 2. Change recursively the user and group ownership for project files
+## 3. Change recursively the user and group ownership for project files
 ```
 chown -R www-data:www-data my-atrocore-project/
 ```
 >**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
-## 3. Change the permissions for project files
+## 4. Change the permissions for project files
 ```
 find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find client data custom upload -type d -exec chmod 775 {} + && find client data custom upload -type f -exec chmod 664 {} +
 ```     
-## 4. Configure the crontab
+## 5. Configure the crontab
 
-   4.1. Open crontab for www-data user:
+   5.1. Open crontab for www-data user:
 ```
 crontab -e -u www-data
 ``` 
-   4.2. Add the following configuration:
+   5.2. Add the following configuration:
 ```      
 * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
 ```
 
-## 5. Create MySQL database and user
+## 6. Create MySQL database and user
 
 User must have all privileges for database. You can create database and user with all privileges by executing next few commands:
 
@@ -65,6 +66,6 @@ ALTER USER atrocore_user@localhost IDENTIFIED BY 'atrocore_password';
 GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
 ```
 
-## 6. Go to http://YOUR_PROJECT/ to start the installation wizard 
+## 7. Go to http://YOUR_PROJECT/ to start the installation wizard 
 
 Start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
