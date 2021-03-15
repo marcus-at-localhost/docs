@@ -24,21 +24,29 @@ cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project
 > It is essential because of stability reasons, that you use the conposer version, which is embedded in our software. That is why `php composer.phar update` is used.
 
 ### 2.1. If you want to install AtroPIM and AtroDAM with demo data
+
+run
 ```
 git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar update
 ```
 
 ### 2.2. If want want to install the AtroPIM with AtroDAM without demo data
+
+run
 ```
 git clone https://github.com/atrocore/skeleton-pim-no-demo.git . && php composer.phar update
 ```
 
 ### 2.3. If you want to install AtroDAM with demo data
+
+run
 ```
 git clone https://github.com/atrocore/skeleton-dam.git . && php composer.phar update
 ```
 
 ### 2.4. If you want to install AtroDAM without demo data
+
+run
 ```
 git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer.phar update
 ```
