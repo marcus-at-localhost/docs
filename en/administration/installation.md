@@ -11,7 +11,7 @@ Before you start you need to configure your web server:
 
 After you have configured your web server you may start to install the Application.
 
-## 1. Create your project dir
+## 1. Create your project directory
 ```
 cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project 
 ```
