@@ -18,10 +18,48 @@ cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project
 > **my-atrocore-project** – project name
 
 ## 2. Download project files
+
+### 2.1. If you want to install AtroPIM and AtroDAM with demo data
 ```
 git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar update
 ```
-> git is required for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed
+> git is required for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application, if you have no git installed, plese see 2.3.
+
+> It is essential because of stability reasons, that you use the conposer version, which is embedded in our software. That is why `php composer.phar update` is used.
+
+### 2.2. If want want to install the AtroPIM with AtroDAM without demo data
+```
+git clone https://github.com/atrocore/skeleton-pim-no-demo.git . && php composer.phar update
+```
+
+### 2.3. If you want to install AtroDAM with demo data
+```
+git clone https://github.com/atrocore/skeleton-dam.git . && php composer.phar update
+```
+
+### 2.4. If you want to install AtroDAM without demo data
+```
+git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer.phar update
+```
+
+### 2.5. If you want to install AtroCore only
+Please install AtroDAM and than remove AtroDAM module via Administration > Module Manager.
+
+### 2.6. Installation without `git` command
+If you have no git installed you may still copy the files to the project folder manually.
+
+You can download the files from one of this directory:
+- https://github.com/atrocore/skeleton-pim
+- https://github.com/atrocore/skeleton-pim-no-demo
+- https://github.com/atrocore/skeleton-dam 
+- https://github.com/atrocore/skeleton-dam-no-demo
+
+Than upload the files to your project folder and run
+```
+php composer.phar update
+```
+
+
    
 ## 3. Change recursively the user and group ownership for project files
 ```
