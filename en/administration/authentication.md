@@ -31,3 +31,9 @@ Returns:
 * `preferences` - user preferences
 
 * `user` - user record attributes
+
+* `language` - current language
+
+* `settings` - system settings
+
+* `appParams` - additional parameters
