@@ -59,3 +59,6 @@ Returns:
 * `settings` - system settings
 
 * `appParams` - additional parameters
+
+## API Calls
+All API Calls for AtroCore, AtroPIM and AtroDAM can be found [here](https://demo.atropim.com/apidocs/index.html)
