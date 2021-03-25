@@ -27,7 +27,7 @@ cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project
 
 run
 ```
-git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar update
+git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar self-update && php composer.phar update
 ```
 
 ### 2.2. If want want to install the AtroPIM with AtroDAM without demo data
