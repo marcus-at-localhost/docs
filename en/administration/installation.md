@@ -34,21 +34,21 @@ git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar up
 
 run
 ```
-git clone https://github.com/atrocore/skeleton-pim-no-demo.git . && php composer.phar update
+git clone https://github.com/atrocore/skeleton-pim-no-demo.git . && php composer.phar self-update && php composer.phar update
 ```
 
 ### 2.3. If you want to install AtroDAM with demo data
 
 run
 ```
-git clone https://github.com/atrocore/skeleton-dam.git . && php composer.phar update
+git clone https://github.com/atrocore/skeleton-dam.git . && php composer.phar self-update && php composer.phar update
 ```
 
 ### 2.4. If you want to install AtroDAM without demo data
 
 run
 ```
-git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer.phar update
+git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer.phar self-update && php composer.phar update
 ```
 
 ### 2.5. If you want to install AtroCore only
