@@ -22,29 +22,16 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
 ## Authentication
 
-### Basic Authentication
+### 1. Obtain an access token
 
-For regular users AtroCore uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password (or token) are passed through `Authorization` header encoded in base64.
+For obtaining access token you need to send GET request to ```/api/v1/App/user``` using [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password should passed through `Authorization` header encoded in base64.
 
-`"Authorization: Basic " + base64Encode(username + ':' + password)`
-
-It's better to use auth token instead of password when you work with API. In this case you will need to provide username and password/token in `Espo-Authorization` header.
-
-`"Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)`
-
-1. Obtain an access token by `GET App/user` request with the username and password passed in `Espo-Authorization` header.
-
-2. Use this token instead of password in `Espo-Authorization` header for all further request.
-
-3. If the request returns 401 error that means either username/password is wrong or token is not valid anymore.
-
-**Authentication Token / User Specific Data**
-
-`GET App/user`
-
-Make this request to retrieve an access token.
-
-Returns:
+Example:
+```
+    GET | http://atropim.local/api/v1/App/user
+HEADERS | Authorization: Basic " + base64Encode(username + ':' + password)
+```
+In a response you will get:
 
 * `token` - access token to use
 
@@ -60,5 +47,22 @@ Returns:
 
 * `appParams` - additional parameters
 
-## API Calls
-All API Calls for AtroCore, AtroPIM and AtroDAM can be found [here](https://demo.atropim.com/apidocs/index.html).
+### 2. For all further request
+
+For all further requests you should add the following headers:
+
+```
+Espo-Authorization: " + base64Encode(username  + ':' + token)
+Espo-Authorization-By-Token: true
+```
+
+Example:
+
+```
+    GET | http://atropim.local/api/v1/Product
+HEADERS | Espo-Authorization: " + base64Encode(username  + ':' + token)
+          Espo-Authorization-By-Token: true 
+```
+
+## REST API documentation
+REST API documentation generated in you project automatically. For reading, please, go to ```/apidocs/index.html```.
