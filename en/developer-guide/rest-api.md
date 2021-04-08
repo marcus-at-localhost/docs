@@ -6,16 +6,15 @@ You can learn how API works if you trace what's going in the network tab in your
 
 Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format.
 
-Requests needs to have the header: `Content-Type: application/json`.
+All requests needs to have the header: `Content-Type: application/json`. 
 
-The path to the API in AtroCore is: `/api/v1/`. 
+The path to the API in AtroCore is: `/api/v1/`. Only this path can be used for your API requests.
 
 Example of GET API request: 
 
 ```
 GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
 ```
-Only API requests should always be sent to `/api/v1/` and only to this path.
 
 > It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
 
@@ -36,7 +35,7 @@ Example:
 HEADERS | Content-Type: application/json
           Authorization: Basic YWR1taW46YWRtaW4=
 ```
-In a response you will get:
+In the response you will get:
 
 * `token` - access token to use
 
