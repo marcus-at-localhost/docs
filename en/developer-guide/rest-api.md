@@ -29,7 +29,8 @@ For obtaining access token you need to send GET request to ```/api/v1/App/user``
 Example:
 ```
     GET | http://atropim.local/api/v1/App/user
-HEADERS | Authorization: Basic " + base64Encode(username + ':' + password)
+HEADERS | Content-Type: application/json
+          Authorization: Basic " + base64Encode(username + ':' + password)
 ```
 In a response you will get:
 
@@ -60,7 +61,8 @@ Example:
 
 ```
     GET | http://atropim.local/api/v1/Product
-HEADERS | Espo-Authorization: " + base64Encode(username  + ':' + token)
+HEADERS | Content-Type: application/json
+          Espo-Authorization: " + base64Encode(username  + ':' + token)
           Espo-Authorization-By-Token: true 
 ```
 
