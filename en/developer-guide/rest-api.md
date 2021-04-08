@@ -19,7 +19,7 @@ Only API requests should always be sent to `/api/v1/` and only to this path.
 
 > It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
 
-## 1.Step: Authentication
+## 1. Step: Authentication
 
 To be able to use AtroCore API you need to go through authentication and obtain access token. 
 
@@ -52,7 +52,7 @@ In a response you will get:
 
 * `appParams` - additional parameters
 
-## 2.Step: Making requests
+## 2. Step: Making requests
 
 For all further API requests you should append the following headers to all your requests:
 
