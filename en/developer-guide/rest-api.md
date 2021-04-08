@@ -16,7 +16,7 @@ Example of GET API request:
 GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
 ```
 
-> It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
+> It's recommended to create a **separate API user** with specific rights (configure and assign a role to him) and use this user for API calls.
 
 ## 1. Step: Authentication
 
