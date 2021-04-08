@@ -8,29 +8,33 @@ Most of API functions return JSON. POST and PUT requests usually need some data 
 
 Requests needs to have the header: `Content-Type: application/json`.
 
-The path to the API in AtroCore is: `api/v1/`. 
+The path to the API in AtroCore is: `/api/v1/`. 
 
 Example of GET API request: 
 
 ```
 GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
 ```
-
-In this documentation we omit the site URL and `api/v1/` path when we show examples of API functions. If you utilize any our client implementation, it will prepend these parts automatically.
+Only API requests should always be sent to `/api/v1/` and only to this path.
 
 > It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
 
-## Authentication
+## 1.Step: Authentication
 
-### 1. Obtain an access token
+To be able to use AtroCore API you need to go through authentication and obtain access token. 
 
-For obtaining access token you need to send GET request to ```/api/v1/App/user``` using [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password should passed through `Authorization` header encoded in base64.
+For obtaining access token you need to send GET request to `/api/v1/App/user` using [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). 
+
+Username and password should passed through `Authorization` header encoded in base64.
+```
+"Authorization: Basic " + base64Encode(username + ':' + password)
+```
 
 Example:
 ```
     GET | http://atropim.local/api/v1/App/user
 HEADERS | Content-Type: application/json
-          Authorization: Basic " + base64Encode(username + ':' + password)
+          Authorization: Basic YWR1taW46YWRtaW4=
 ```
 In a response you will get:
 
@@ -48,13 +52,13 @@ In a response you will get:
 
 * `appParams` - additional parameters
 
-### 2. For all further request
+## 2.Step: Making requests
 
-For all further requests you should add the following headers:
+For all further API requests you should append the following headers to all your requests:
 
 ```
-Espo-Authorization: " + base64Encode(username  + ':' + token)
-Espo-Authorization-By-Token: true
+"Espo-Authorization: " + base64Encode(username  + ':' + token)
+"Espo-Authorization-By-Token: true"
 ```
 
 Example:
@@ -62,9 +66,11 @@ Example:
 ```
     GET | http://atropim.local/api/v1/Product
 HEADERS | Content-Type: application/json
-          Espo-Authorization: " + base64Encode(username  + ':' + token)
+          Espo-Authorization: YWRtaW46WVdSMXRhVzQ2WVdSdGFXND0=
           Espo-Authorization-By-Token: true 
 ```
 
 ## REST API documentation
-REST API documentation generated in you project automatically. For reading, please, go to ```/apidocs/index.html```.
+REST API documentation is generated for each project automatically, based on the core and modules you are using. 
+
+To access it please go to `https://address_of_your_atrocore/apidocs/index.html`.
