@@ -60,7 +60,7 @@ For all further API requests you should append the following headers to all your
 "Espo-Authorization-By-Token: true"
 ```
 
-Example:
+Here is the example how you can get list of your products:
 
 ```
     GET | http://atropim.local/api/v1/Product
