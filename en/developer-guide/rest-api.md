@@ -56,8 +56,7 @@ In the response you will get:
 For all further API requests you should append the following headers to all your requests:
 
 ```
-"Espo-Authorization: " + base64Encode(username  + ':' + token)
-"Espo-Authorization-By-Token: true"
+"Authorization-Token: " + base64Encode(username  + ':' + token)
 ```
 
 Here is the example how you can get list of your products:
