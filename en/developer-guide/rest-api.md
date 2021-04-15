@@ -64,8 +64,7 @@ Here is the example how you can get list of your products:
 ```
     GET | http://atropim.local/api/v1/Product
 HEADERS | Content-Type: application/json
-          Espo-Authorization: YWRtaW46WVdSMXRhVzQ2WVdSdGFXND0=
-          Espo-Authorization-By-Token: true 
+          Authorization-Token: YWRtaW46WVdSMXRhVzQ2WVdSdGFXND0=
 ```
 
 ## REST API documentation
