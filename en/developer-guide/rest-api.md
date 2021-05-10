@@ -37,6 +37,8 @@ HEADERS | Content-Type: application/json
           Authorization-Token-Lifetime: 2
           Authorization-Token-Idletime: 2
 ```
+> **Authorization-Token-Lifetime** and **Authorization-Token-Idletime** are an optional parameters. Unit of measure is **hour**. **0** means no expiration.
+
 In the response you will get:
 
 * `token` - access token to use
