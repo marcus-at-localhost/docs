@@ -37,7 +37,7 @@ HEADERS | Content-Type: application/json
           Authorization-Token-Lifetime: 2
           Authorization-Token-Idletime: 2
 ```
-> **Authorization-Token-Lifetime** and **Authorization-Token-Idletime** are optional parameters. Unit of measure is **hour**. **0** means no expiration.
+> **Authorization-Token-Lifetime** and **Authorization-Token-Idletime** are optional parameters. Unit of measure is **hour**. **0** means no expiration. If these parameters are not transmitted, globally configured parameters are used.
 
 In the response you will get:
 
