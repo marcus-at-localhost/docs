@@ -34,6 +34,8 @@ Example:
     GET | http://atropim.local/api/v1/App/user
 HEADERS | Content-Type: application/json
           Authorization: Basic YWR1taW46YWRtaW4=
+          Authorization-Token-Lifetime: 2
+          Authorization-Token-Idletime: 2
 ```
 In the response you will get:
 
