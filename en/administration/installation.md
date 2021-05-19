@@ -72,7 +72,7 @@ php composer.phar update
 ```
 chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
-> Ubuntu and Debian Linux have **www-data** as a standard user for the webserver. This depends on your webserver and can be one of the following: www, www-data, apache, etc.
+> Ubuntu and Debian Linux have **www-data** as a standard user for the webserver. This can also be one of the following: www, www-data, apache, etc.
 
 ## 4. Change the permissions for project files
 ```
@@ -81,7 +81,7 @@ find client data custom upload -type d -exec chmod 775 {} + && find client data 
 ```     
 ## 5. Configure the crontab
 
-   5.1. Open crontab for www-data user:
+   5.1. Open crontab for your webserver user, which is www-data in our case:
 ```
 crontab -e -u www-data
 ``` 
@@ -89,7 +89,7 @@ crontab -e -u www-data
 ```      
 * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
 ```
-> Please consider `/usr/bin/php` is the correct path to PHP in our case. You may have other path.
+> Please consider that `/usr/bin/php` is the correct path to PHP in our case. You may have other path.
 
 ## 6. Create MySQL database and user
 
