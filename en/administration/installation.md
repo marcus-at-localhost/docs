@@ -72,7 +72,7 @@ php composer.phar update
 ```
 chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
-> Ubuntu and Debian have **www-data** as a standard user for the webserver. This can also be one of the following: www, www-data, apache, etc.
+> Ubuntu and Debian use **www-data** as a standard user for the webserver. This can also be one of the following: www, apache2, psacln etc.
 
 ## 4. Change the permissions for project files
 ```
