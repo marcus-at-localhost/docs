@@ -68,13 +68,11 @@ Than upload the files to your project folder and run
 php composer.phar update
 ```
 
-
-   
 ## 3. Change recursively the user and group ownership for project files
 ```
 chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
->**www-data** – depends on your webserver and can be one of the following: www, www-data, apache, etc.
+> Ubuntu and Debian Linux have **www-data** as a standard user for the webserver. This depends on your webserver and can be one of the following: www, www-data, apache, etc.
 
 ## 4. Change the permissions for project files
 ```
@@ -91,6 +89,7 @@ crontab -e -u www-data
 ```      
 * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
 ```
+> Please consider `/usr/bin/php` is the correct path to PHP in our case. You may have other path.
 
 ## 6. Create MySQL database and user
 
