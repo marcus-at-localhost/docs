@@ -68,11 +68,11 @@ Than upload the files to your project folder and run
 php composer.phar update
 ```
 
-## 3. Change recursively the user and group ownership for project files
+## 3. Change recursively the user and group ownership for your project files
 ```
 chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
-> Ubuntu and Debian Linux have **www-data** as a standard user for the webserver. This can also be one of the following: www, www-data, apache, etc.
+> Ubuntu and Debian have **www-data** as a standard user for the webserver. This can also be one of the following: www, www-data, apache, etc.
 
 ## 4. Change the permissions for project files
 ```
