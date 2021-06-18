@@ -220,8 +220,14 @@ Now go to your browser and access your server’s domain name or IP address once
 http://your_domain
 ```
 
+ > **Note:** Make sure that you configured your domain name 
+
 You’ll see a page like this:
 
 ![hello-world](../../_assets/administration/server-preparation/hello-world.png)
 
-If you see this page, it means your Apache virtual host is working as expected. Now you can continue to install your AtroCore Application.
+If you see this page, it means your Apache virtual host is working as expected. 
+
+
+## 6. Install AtroCore Application
+Now your server prepared to install AtroCore Application. [Go to](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/installation.md#2-install-atrocore-atropim-atrodam-etc-application) install guide. 
