@@ -111,8 +111,7 @@ CREATE DATABASE atrocore;
 ```
 Create user **atrocore_user** with password **atrocore_password** and grant all needed privileges:
 ```
-CREATE USER atrocore_user@localhost;
-ALTER USER atrocore_user@localhost IDENTIFIED BY 'atrocore_password';
+CREATE USER 'atrocore_user'@'localhost' IDENTIFIED BY 'atrocore_password';
 GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
 ```
 
