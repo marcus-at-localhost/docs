@@ -4,8 +4,8 @@
 
 ## 1. Linux Server Preparation
 This section will describe how to prepare server for an installation of AtroCore Application.
-* [Apache server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation.md) (RECOMMENDED)
-* [Nginx server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation-nginx.md)
+* [Apache server preparation](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation.md) (RECOMMENDED)
+* [Nginx server preparation](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation-nginx.md)
 
 ## 2. Install AtroCore (AtroPIM, AtroDAM, etc) Application
 This section will describe how to install AtroCore Application to prepared server.
