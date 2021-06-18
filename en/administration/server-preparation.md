@@ -211,6 +211,11 @@ Now use ```a2ensite``` to enable the new virtual host:
 sudo a2ensite your_domain
 ```
 
+You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website, type:
+```
+sudo a2dissite 000-default
+```
+
 To make sure your configuration file doesn’t contain syntax errors, run:
 ```
 sudo apache2ctl configtest
@@ -218,7 +223,7 @@ sudo apache2ctl configtest
 
 Finally, reload Apache so these changes take effect:
 ```
-sudo service apache2 restart
+sudo systemctl reload apache2
 ```
 
 Now go to your browser and access your server’s domain name or IP address once again:
