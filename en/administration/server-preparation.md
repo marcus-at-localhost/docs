@@ -17,7 +17,7 @@ Enable mod_rewrite:
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
-Once the installation is finished, you’ll need to adjust your firewall settings to allow HTTP traffic. UFW has different application profiles that you can leverage for accomplishing that. To list all currently available UFW application profiles, you can run:
+If you have the ```ufw``` firewall enabled, you’ll need to adjust your firewall settings to allow HTTP traffic. UFW has different application profiles that you can leverage for accomplishing that. To list all currently available UFW application profiles, you can run:
 ```
 sudo ufw app list
 ```
