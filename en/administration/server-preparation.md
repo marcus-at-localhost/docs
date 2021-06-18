@@ -117,4 +117,23 @@ Ctrl + D
 ```
 
 ## 3. Installing PHP
-You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the final user. In addition to the ```php``` package, you’ll need ```php-mysql```, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need ```libapache2-mod-php``` to enable Apache to handle PHP files and others required modules for AtroCore Application.  
+You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the final user. In addition to the ```php``` package, you’ll need ```php-mysql```, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need ```libapache2-mod-php``` to enable Apache to handle PHP files and others required modules for AtroCore Application.
+
+To install these packages, run:
+```
+sudo apt -y install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-zip php-imagick
+```
+
+Once the installation is finished, you can run the following command to confirm your PHP version:
+```
+php -v
+```
+You should see output like this:
+```
+PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+```
+
+At this point, your server is fully operational, but before you can test your setup with a PHP script, it’s best to set up a proper Apache Virtual Host to hold your website’s files and folders. We’ll do that in the next step.
