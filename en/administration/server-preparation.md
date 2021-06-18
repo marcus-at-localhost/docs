@@ -183,6 +183,10 @@ sudo chown -R www-data:www-data /var/www/your_domain
 
 Then, open a new configuration file in Apache’s ```sites-available``` directory using your preferred command-line editor. Here, we’ll use ```nano```:
 ```
+sudo nano /etc/apache2/sites-available/your_domain.conf
+```
+This will create a new blank file. Paste in the following bare-bones configuration:
+```
 <VirtualHost *:80>
     ServerName your_domain
     ServerAlias www.your_domain
