@@ -143,7 +143,7 @@ At this point, PHP installed, and now you need to configure it.
 To configure, run:
 ```
 sudo printf "post_max_size = 20M\nupload_max_filesize = 20M\nmax_execution_time = 180\nmax_input_time = 180\nmemory_limit = 256M" >> /etc/php/7.4/fpm/php.ini
-sudo service nginx restart
+sudo systemctl restart php7.4-fpm
 ```
 
  > **Note:** If you are using a another version of PHP, provide the correct path to **php.ini**
