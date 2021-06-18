@@ -2,10 +2,10 @@
 
 > Installation guide is based on **Ubuntu**. Of course, you can use any unix-based system, but make sure that your OS supports the following commands.<br/>
 
-## 1. Server Preparation
+## 1. Linux Server Preparation
 This section will describe how to prepare server for an installation. [Details](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation.md).
 
-## 2. Install AtroCore (AtroPIM, AtroDAM, etc)
+## 2. Install AtroCore (AtroPIM, AtroDAM, etc) Application
 This section will describe how to install AtroCore Application to prepared server.
 
 ### 1. Create your project directory
