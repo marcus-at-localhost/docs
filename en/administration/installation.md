@@ -8,50 +8,58 @@ This section will describe how to prepare server for an installation. [Details](
 ## 2. Install AtroCore (AtroPIM, AtroDAM, etc) Application
 This section will describe how to install AtroCore Application to prepared server.
 
-### 1. Create your project directory
+### 1. Create your project directory (if not exists yet)
+> if directory already exists, remove all inside directory
+
+For create directory, run:
 ```
-cd /var/www && mkdir my-atrocore-project && cd my-atrocore-project 
+mkdir /var/www/my-atrocore-project 
 ```
 > **my-atrocore-project** – project name
 
-### 2. Download project files
+### 2. Go to your project directory
+```
+cd /var/www/my-atrocore-project 
+```
+
+### 3. Download project files
 
 > Git may be used for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application without having `git` - please see the chapter 2.6 for it.
 
 > It is essential, that you use the composer version, which is embedded in our software, because this version contains some of our modifications needed for backup and restoring of the system files and database. That is why `php composer.phar update` is used. Please **DO NOT** use a composer that is installed on your server as it does not contain the required modifications.
 
-#### 2.1. If you want to install AtroPIM and AtroDAM with demo data
+#### 3.1. If you want to install AtroPIM and AtroDAM with demo data
 
 run
 ```
 git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar self-update && php composer.phar update
 ```
 
-#### 2.2. If want want to install the AtroPIM with AtroDAM without demo data
+#### 3.2. If want want to install the AtroPIM with AtroDAM without demo data
 
 run
 ```
 git clone https://github.com/atrocore/skeleton-pim-no-demo.git . && php composer.phar self-update && php composer.phar update
 ```
 
-#### 2.3. If you want to install AtroDAM with demo data
+#### 3.3. If you want to install AtroDAM with demo data
 
 run
 ```
 git clone https://github.com/atrocore/skeleton-dam.git . && php composer.phar self-update && php composer.phar update
 ```
 
-#### 2.4. If you want to install AtroDAM without demo data
+#### 3.4. If you want to install AtroDAM without demo data
 
 run
 ```
 git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer.phar self-update && php composer.phar update
 ```
 
-#### 2.5. If you want to install AtroCore only
+#### 3.5. If you want to install AtroCore only
 Please install AtroDAM and than remove AtroDAM module via Administration > Module Manager.
 
-#### 2.6. Installation without `git` command
+#### 3.6. Installation without `git` command
 If you have no git installed you may still copy the files to the project folder manually.
 
 You can download the files from one of this directory:
@@ -65,29 +73,29 @@ Than upload the files to your project folder and run
 php composer.phar update
 ```
 
-### 3. Change recursively the user and group ownership for your project files
+### 4. Change recursively the user and group ownership for your project files
 ```
 chown -R www-data:www-data /var/www/my-atrocore-project/
 ```
 > Ubuntu and Debian use **www-data** as a standard user for the webserver. This can also be one of the following: www, apache2, psacln etc.
 
-### 4. Change the permissions for project files
+### 5. Change the permissions for project files
 ```
 find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find client data custom upload -type d -exec chmod 775 {} + && find client data custom upload -type f -exec chmod 664 {} +
 ```     
-### 5. Configure the crontab
-   5.1. Open crontab for your webserver user, which is www-data in our case:
+### 6. Configure the crontab
+   6.1. Open crontab for your webserver user, which is www-data in our case:
 ```
 crontab -e -u www-data
 ``` 
-   5.2. Add the following configuration:
+   6.2. Add the following configuration:
 ```      
 * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
 ```
 > Please consider that `/usr/bin/php` is the correct path to PHP in our case. You may have other path.
 
-### 6. Create MySQL database and user
+### 7. Create MySQL database and user
 
 User must have all privileges for database. You can create database and user with all privileges by executing next few commands:
 
@@ -108,6 +116,6 @@ ALTER USER atrocore_user@localhost IDENTIFIED BY 'atrocore_password';
 GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
 ```
 
-### 7. Go to http://YOUR_PROJECT/ to start the installation wizard 
+### 8. Go to http://YOUR_PROJECT/ to start the installation wizard 
 
 Start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
