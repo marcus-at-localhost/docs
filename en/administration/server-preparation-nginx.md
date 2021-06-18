@@ -190,11 +190,10 @@ This will create a new blank file. Paste in the following bare-bones configurati
 ```
 server {
   listen 80;
-  root /var/www/your_domain; ## Specify your document root
-  server_name your_domain;  ## Replace apropim.local to your domain name
-  server_tokens off; ## Don't show the nginx version number
+  server_name your_domain;
+  root /var/www/your_domain;
+  
   index index.php index.html;
-  resolver 172.17.0.1 valid=60s ipv6=off;
 
   client_max_body_size 50M;
   
@@ -217,13 +216,9 @@ server {
     rewrite ^/(.*)$ /index.php?treoq=$1;
   }
 
-  # Specify your PHP (php-cgi or php-fpm) based on your configuration
   location ~ \.php$ {
-    try_files $fastcgi_script_name =404;
-    fastcgi_keep_conn on;
-    fastcgi_pass unix:/var/run/php-fpm.sock;
-    include fastcgi_params;
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
   }
   
 }
