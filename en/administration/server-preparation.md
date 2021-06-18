@@ -144,4 +144,80 @@ To configure, run:
 sudo printf "post_max_size = 20M\nupload_max_filesize = 20M\nmax_execution_time = 180\nmax_input_time = 180\nmemory_limit = 256M" >> /etc/php/7.4/apache2/php.ini
 sudo service apache2 restart
 ```
+
  > **Note:** If you are using a another version of PHP, provide the correct path to **php.ini**
+  
+## 5. Creating a Virtual Host for your Application
+When using the Apache web server, you can create virtual hosts to encapsulate configuration details and host more than one domain from a single server. In this guide, we’ll set up a domain called **your_domain**, but you should **replace this with your own domain name**.
+
+Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the ```/var/www/html``` directory. While this works well for a single site, it can become unwieldy if you are hosting multiple sites. Instead of modifying ```/var/www/html```, we’ll create a directory structure within ```/var/www``` for the ***your_domain*** site, leaving ```/var/www/html``` in place as the default directory to be served if a client request doesn’t match any other sites.
+
+Create the directory for **your_domain** as follows:
+```
+sudo mkdir /var/www/your_domain
+```
+
+Create an index.html file in that location so that we can test that the virtual host works as expected:
+```
+nano /var/www/your_domain/index.html
+```
+Include the following content in this file:
+```
+<html>
+  <head>
+    <title>Your website</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is the landing page of <strong>your_domain</strong>.</p>
+  </body>
+</html>
+```
+Save and close the file when you’re done. If you’re using ```nano```, you can do that by pressing ```CTRL+X```, then ```Y``` and ```ENTER```.
+
+Next, assign ownership of the directory:
+```
+sudo chown -R www-data:www-data /var/www/your_domain
+```
+ > Ubuntu and Debian use www-data as a standard user for the webserver. This can also be one of the following: www, apache2, psacln etc
+
+Then, open a new configuration file in Apache’s ```sites-available``` directory using your preferred command-line editor. Here, we’ll use ```nano```:
+```
+<VirtualHost *:80>
+    ServerName your_domain
+    ServerAlias www.your_domain
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/your_domain
+    <Directory var/www/your_domain/>
+    AllowOverride All
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+Now use ```a2ensite``` to enable the new virtual host:
+```
+sudo a2ensite your_domain
+```
+
+To make sure your configuration file doesn’t contain syntax errors, run:
+```
+sudo apache2ctl configtest
+```
+
+Finally, reload Apache so these changes take effect:
+```
+sudo service apache2 restart
+```
+
+Now go to your browser and access your server’s domain name or IP address once again:
+```
+http://your_domain
+```
+
+You’ll see a page like this:
+
+![hello-world](../../_assets/administration/server-preparation/hello-world.png)
+
+If you see this page, it means your Apache virtual host is working as expected. Now you can continue to install your AtroCore Application.
