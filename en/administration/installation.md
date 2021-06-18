@@ -3,7 +3,7 @@
 > Installation guide is based on **Ubuntu**. Of course, you can use any unix-based system, but make sure that your OS supports the following commands.<br/>
 
 ## 1. Linux Server Preparation
-This section will describe how to prepare server for an installation.
+This section will describe how to prepare server for an installation of AtroCore Application.
 * [Apache server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation.md) (RECOMMENDED)
 * [Nginx server configuration](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation-nginx.md)
 
