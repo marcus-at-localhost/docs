@@ -31,8 +31,13 @@ Here’s what each of these profiles mean:
 So, to allow traffic on port 80 and 443, use the Apache profile:
 ```
 sudo ufw allow in "Apache Full"
-sudo ufw allow in "OpenSSH" # OPTIONAL. In case if you just enable firewall, don't forget to allow ssh connection, because it can be your last connection :)
 ```
+
+> **Note:** In case if you just enable firewall, don't forget to allow ssh connection, because it can be your last connection :)
+```
+sudo ufw allow in "OpenSSH"
+```
+
 You can verify the change with:
 ```
 sudo ufw status
