@@ -136,4 +136,12 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
     with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
 ```
 
-At this point, your server is fully operational, but before you can test your setup with a PHP script, it’s best to set up a proper Apache Virtual Host to hold your website’s files and folders. We’ll do that in the next step.
+## 4. Configuring PHP
+At this point, PHP installed, and now you need to configure it.
+
+To configure, run:
+```
+sudo printf "post_max_size = 20M\nupload_max_filesize = 20M\nmax_execution_time = 180\nmax_input_time = 180\nmemory_limit = 256M" >> /etc/php/7.4/apache2/php.ini
+sudo service apache2 restart
+```
+ > **Note:** If you are using a another version of PHP, provide the correct path to **php.ini**
