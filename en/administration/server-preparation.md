@@ -115,3 +115,6 @@ To exit the MySQL console, do:
 ```
 Ctrl + D
 ```
+
+## 3. Installing PHP
+You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the final user. In addition to the ```php``` package, you’ll need ```php-mysql```, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need ```libapache2-mod-php``` to enable Apache to handle PHP files and others required modules for AtroCore Application.  
