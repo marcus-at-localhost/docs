@@ -1,9 +1,9 @@
 # Linux Server Preparation (Nginx)
-This guide describing how to prepare server for an installation.
+This guide describes how to prepare the Nginx web server for the installation of AtroCore Applications.
 
 > Installation guide is based on **Ubuntu 20.04**.
 
-## 1. Installing the Nginx Web Server
+## 1. Install the Nginx Web Server
 In order to display web pages to our site visitors, we are going to employ Nginx, a high-performance web server.
 
 Install Nginx using Ubuntu’s package manager, ```apt```:
@@ -62,7 +62,7 @@ http://your_server_ip
 You’ll see the default Ubuntu 20.04 Nginx web page. It should look something like this:
 ![nginx_default](../../_assets/administration/server-preparation/nginx_default.png)
 
-## 2. Installing MySQL
+## 2. Install MySQL
 Now that you have a web server up and running, you need to install the database system to be able to store and manage data for your site. MySQL is a popular database management system used within PHP environments.
 
 Again, use ```apt``` to acquire and install this software:
@@ -117,7 +117,7 @@ To exit the MySQL console, do:
 Ctrl + D
 ```
 
-## 3. Installing PHP
+## 3. Install PHP
 You have Nginx installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the final user. In addition to the ```php-fpm``` package, you’ll need ```php-mysql```, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need enable required modules for AtroCore Application.
 
 To install these packages, run:
@@ -140,7 +140,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ## 4. Configuring PHP
 At this point, PHP installed, and now you need to configure it.
 
-To configure, run:
+To configure PHP run:
 ```
 sudo printf "post_max_size = 20M\nupload_max_filesize = 20M\nmax_execution_time = 180\nmax_input_time = 180\nmemory_limit = 256M" >> /etc/php/7.4/fpm/php.ini
 sudo systemctl restart php7.4-fpm
@@ -259,4 +259,4 @@ If you see this page, it means your Nginx server block is working as expected.
 
 
 ## 6. Install AtroCore Application
-Now your server prepared to install AtroCore Application. [Go to](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/installation.md#2-install-atrocore-atropim-atrodam-etc-application) install guide. 
+Now your server is prepared for the installation of the AtroCore Application. [Go to](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/installation.md#2-install-atrocore-atropim-atrodam-etc-application) install guide. 
