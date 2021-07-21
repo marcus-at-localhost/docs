@@ -8,27 +8,27 @@ This section will describe how to prepare server for an installation of AtroCore
 * [Nginx server preparation](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/server-preparation-nginx.md)
 
 ## 2. Install AtroCore (AtroPIM, AtroDAM, etc) Application
-This section will describe how to install AtroCore Application to prepared server.
+This section describes how to install AtroCore Application on the prepared web server.
 
 ### 1. Create your project directory (if not exists yet)
-> if directory already exists, remove all inside directory
+> if the directory already exists, remove everything inside the directory.
 
-For create directory, run:
+To create the directory, run the command:
 ```
 mkdir /var/www/my-atrocore-project 
 ```
 > **my-atrocore-project** – project name
 
-### 2. Go to your project directory
+### 2. Go inside of your project directory
 ```
 cd /var/www/my-atrocore-project 
 ```
 
 ### 3. Download project files
 
-> Git may be used for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. It is still possible to install the application without having `git` - please see the chapter 2.6 for it.
+> Git may be used for this step, so make sure that [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is installed. Please note, it is still possible to install the application without having `git` (see 3.6).
 
-> It is essential, that you use the composer version, which is embedded in our software, because this version contains some of our modifications needed for backup and restoring of the system files and database. That is why `php composer.phar update` is used. Please **DO NOT** use a composer that is installed on your server as it does not contain the required modifications.
+> It is essential, that you use the composer version, which is embedded in our software, because this version contains some of our modifications needed for backup and restoring of the system files and the database. That is why `php composer.phar update` is used. Please **DO NOT** use composer, which is installed on your server as it does not contain the required modifications.
 
 #### 3.1. If you want to install AtroPIM and AtroDAM with demo data
 
@@ -37,7 +37,7 @@ run
 git clone https://github.com/atrocore/skeleton-pim.git . && php composer.phar self-update && php composer.phar update
 ```
 
-#### 3.2. If want want to install the AtroPIM with AtroDAM without demo data
+#### 3.2. If want want to install the AtroPIM and AtroDAM without demo data
 
 run
 ```
@@ -61,7 +61,7 @@ git clone https://github.com/atrocore/skeleton-dam-no-demo.git . && php composer
 #### 3.5. If you want to install AtroCore only
 Please install AtroDAM and than remove AtroDAM module via Administration > Module Manager.
 
-#### 3.6. Installation without `git` command
+#### 3.6. Installation without `git` 
 If you have no git installed you may still copy the files to the project folder manually.
 
 You can download the files from one of this directory:
@@ -95,11 +95,11 @@ crontab -e -u www-data
 ```      
 * * * * * /usr/bin/php /var/www/my-atrocore-project/index.php cron 
 ```
-> Please consider that `/usr/bin/php` is the correct path to PHP in our case. You may have other path.
+> Please consider that `/usr/bin/php` is the correct path to PHP in our case. You may have other path. "cron" is the required parameter and should be definitely included for appropriate functioning.
 
 ### 7. Create MySQL database and user
 
-User must have all privileges for database. You can create database and user with all privileges by executing next few commands:
+User must have all privileges for the database, which should be used for the AtroCore Application. You can create database and user with all privileges by executing next few commands:
 
 > If MySQL Database is not installed, you need to install it.
 
