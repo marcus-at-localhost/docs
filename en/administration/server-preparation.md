@@ -1,10 +1,10 @@
-# Linux Server Preparation (Apache)
-This guide describing how to prepare server for an installation.
+# Apache Server Preparation (Apache)
+This guide describes how to prepare the web server for the installation of AtroCore Applications.
 
 > Installation guide is based on **Ubuntu 20.04**.
 
 ## 1. Installing Apache and Updating the Firewall
-The Apache web server is among the most popular web servers in the world. It’s well documented, has an active community of users, and has been in wide use for much of the history of the web, which makes it a great default choice for hosting a website.
+The Apache web server is among the most popular web servers in the world. It’s well documented, has an active community of users, and has been in wide use for much of the history of the web, which makes it a great default choice for hosting a web application.
 
 Install Apache using Ubuntu’s package manager, ```apt```:
 ```
@@ -68,7 +68,7 @@ You’ll see the default Ubuntu 20.04 Apache web page. It should look something 
 ![apache_default](../../_assets/administration/server-preparation/apache_default.png)
 
 ## 2. Installing MySQL
-Now that you have a web server up and running, you need to install the database system to be able to store and manage data for your site. MySQL is a popular database management system used within PHP environments.
+Now, after you have the web server up and running, you need to install the database system to be able to store and manage data for your web application. MySQL is a popular database management system used within PHP environments.
 
 Again, use ```apt``` to acquire and install this software:
 ```
@@ -143,9 +143,9 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ```
 
 ## 4. Configuring PHP
-At this point, PHP installed, and now you need to configure it.
+After PHP is installed, you need to configure it.
 
-To configure, run:
+run for it:
 ```
 sudo printf "post_max_size = 20M\nupload_max_filesize = 20M\nmax_execution_time = 180\nmax_input_time = 180\nmemory_limit = 256M" >> /etc/php/7.4/apache2/php.ini
 sudo service apache2 restart
