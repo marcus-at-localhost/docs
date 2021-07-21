@@ -1,4 +1,4 @@
-# Apache Server Preparation
+# Apache Web Server Preparation
 This guide describes how to prepare the web server for the installation of AtroCore Applications.
 
 > Installation guide is based on **Ubuntu 20.04**.
