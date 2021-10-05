@@ -22,7 +22,16 @@ Next will describe `app` folder structure:
 - `Resources` - has several subfolders such as:
   - `i18n` - modules translations.
   - `layouts` - module layouts.
-  - `metadata` - module metadata.
+  - `metadata` - module metadata. In backend available as instance of `Espo\Core\Utils\Metadata` class from container. 
+  To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
+  Second argument means default value. In fronted metadata object is accessible from all views object by method `getMatedata`.
+  For example `this.getMetadata().get(['entityDefs', 'Test', 'fields', 'name', 'type'])`.
+  Metadata has next sections:
+    - `app` - application definitions.
+    - `clientDefs` - frontend parameters for entities types.
+    - `entitiyDefs` - entity defsinitions such as fields, links, indexes.
+    - `scopes` - general parameters for entities types.
+    - `fields` - fields type definitions.
 - `Servies` - main business logic to work with data. A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. Main methods of the Record service are:
   - `readEntity` - get an entity data.
   - `createEntity` - create new entity.
