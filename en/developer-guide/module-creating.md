@@ -14,7 +14,7 @@ As you can see module consist of two main folders - `app`, where is all backend,
 
 Next will describe `app` folder structure:
 
-- `Modele.php` - main module class where are described module configuration such as module load order, path to files, loading metadata and layouts, etc.
+- `Module.php` - main module class where are described module configuration such as module load order, path to files, loading metadata and layouts, etc.
 - `Controllers` - contains the controllers of the module.
 - `Entities` - folder with ORM entity classes.
 - `Listeners` - event listeners classes.
@@ -23,7 +23,13 @@ Next will describe `app` folder structure:
   - `i18n` - modules translations.
   - `layouts` - module layouts.
   - `metadata` - module metadata.
-- `Servies` - main business logic to work with data.
+- `Servies` - main business logic to work with data. A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. Main methods of the Record service are:
+  - `readEntity` - get an entity data.
+  - `createEntity` - create new entity.
+  - `updateEntity` - update entity data.
+  - `deleteEntity` - delete entity.
+  - `findEntities` - get list of entities by search params, used in list view.
+  - `findLinkedEntities` - get list of related entities, used in relationship panels.
 
 ### Module.php
 
