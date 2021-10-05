@@ -24,7 +24,7 @@ Next will describe `app` folder structure:
   - `layouts` - module layouts.
   - `metadata` - module metadata. In backend available as instance of `Espo\Core\Utils\Metadata` class from container. 
   To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
-  Second argument means default value. In fronted metadata object is accessible from all views object by method `getMatedata`.
+  Second argument means default value. In frontend metadata object is accessible from all views object by method `getMatedata`.
   For example `this.getMetadata().get(['entityDefs', 'Test', 'fields', 'name', 'type'])`.
   Metadata has next sections:
     - `app` - application definitions.
@@ -58,7 +58,7 @@ It has only one required method that must be realized - `getLoadOrder`. It must 
 
 All client files save in two main folders - `templates`, where are all module templates files, and `src`, that contain logic that will be work on client side.
 
-For fronted used Backbone.js library. You can explore it in detail by following the next link to the documentation: https://backbonejs.org.
+For frontend used Backbone.js library. You can explore it in detail by following the next link to the documentation: https://backbonejs.org.
 
 Basically, the frontend uses the view. Every page is rendered by multiple view objects. Every views can have their child views as child can have their own views. When view is rendered it has all HTML of his child views.
 
