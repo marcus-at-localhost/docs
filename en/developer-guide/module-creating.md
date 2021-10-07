@@ -176,7 +176,7 @@ AtroCore give you an abilities to define custom views for certain entity types. 
         }
     }
 
-There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system. `name` and `description` in accordance are name and description on module in Module Manager.
+There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system. `name` and `description` in accordance are name and description of module in Module Manager.
 
 ## Module installation
 
@@ -210,8 +210,8 @@ Now open project `composer.json` file and in `require` section add your module p
 
 ![Adding depandency](../../_assets/developer-guide/module-creating/adding-dependency-on-module.png)
 
-If you open Module Manager you will see that your module prepare for install.
+If you open Module Manager you will see that your module prepared for install.
 
 ![Prepare for install](../../_assets/developer-guide/module-creating/module-manager-dependency.png)
 
-Click on update button or run `php composer.phar update` command to initiate updating. In success your module will be displayed as installed. If was error while updating you can see logs for detailed information. 
+Click on update button or run `php composer.phar update` command from terminal to initiate updating. In success your module will be displayed as installed. If was error while updating, you can see logs for detailed information. 
