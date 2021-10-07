@@ -176,4 +176,42 @@ AtroCore give you an abilities to define custom views for certain entity types. 
         }
     }
 
-There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system.
+There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system. `name` and `description` in accordance are name and description of module in Module Manager.
+
+## Module installation
+
+Modules installation is carried out from the Module Manager located at `Administration > System > Update & Modules` page. To make your module to be available for installation in the modules list , you need to perform certain actions, which will be described below.
+
+> Should be noted that modules installation in AtroCore is based on Composer. You can get detailed information about Composer following the link https://getcomposer.org.
+
+In our modules store showed modules that we had registered in our private repository. In future we will create a possibility to add your own modules in the store. At this moment you can install your module only adding requirement in your composer.json file, that was stored in your project root directory.
+
+First of all, you need to add your module to the packages repository.
+
+> To can get more information about repositories, following this link https://getcomposer.org/doc/05-repositories.md
+
+You can use main composer repository - Packagist (https://packagist.org). Keep in mind, that using Packagist, your module will be in public access. But you also can use any other private repository.
+
+In your git or other VCS repository add and commit the `composer.json` file. Structure of it described in this paragraph - [Composer file](#composer-file).
+
+Next create your first stable release.
+
+![Release create](../../_assets/developer-guide/module-creating/git-releases.png)
+
+Go the your packages repository site and log in or register. After you can submit your package. After you entered your public repository URL it will be checked.
+
+![Submit package](../../_assets/developer-guide/module-creating/submit-package.png)
+
+In success, you will see package administration  page. There you can manage your package, see information about it, available versions, etc.
+
+![Package page](../../_assets/developer-guide/module-creating/packagist.png)
+
+Now open project `composer.json` file and in `require` section add your module package name.
+
+![Adding depandency](../../_assets/developer-guide/module-creating/adding-dependency-on-module.png)
+
+If you open Module Manager you will see that your module prepared for install.
+
+![Prepare for install](../../_assets/developer-guide/module-creating/module-manager-dependency.png)
+
+Click on update button or run `php composer.phar update` command from terminal to initiate updating. In success your module will be displayed as installed. If was error while updating, you can see logs for detailed information. 
