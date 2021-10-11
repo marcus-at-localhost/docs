@@ -64,9 +64,9 @@ All client files are saved in two main folders - `templates`, where all module t
 
 Backbone.js framework is used. You can explore its documentation via this link: https://backbonejs.org.
 
-The frontend uses views. Every page is rendered by using multiple view objects. Every view can have its child views and child can have its own views. ***When view is rendered it has all HTML of his child views.***
+The frontend is based on view trees. Every page is rendered by using multiple view objects, parent view objects may have child view objects, these may have their own child objects and so on. HTML Rendering of the page is started by the child views of the last level.
 
-Here is the example of view `client/modules/example-module/src/views/test/record/detail.js`:
+Here is the example of the view `client/modules/example-module/src/views/test/record/detail.js`:
 ```
     Espo.define('example-module:views/test/record/detail', 'views/record/detail',
         Dep => Dep.extend({
@@ -129,13 +129,13 @@ Here is the example of view `client/modules/example-module/src/views/test/record
         })
     );
 ```
-Template file `client/modules/example-module/res/templates/test/record/detail.tpl`:
+This ist the example of template file for the Detail View `client/modules/example-module/res/templates/test/record/detail.tpl`:
 
 ```
     <div class="some-class">{{key1}}</div>
     <a class="action" data-action="save">Save</a>
 ```
-AtroCore give you an abilities to define custom views for certain entity types. It must be set in `app/Resources/metadata/clientDefs` folder. There is example `app/Resources/metadata/clientDefs/Test.json`:
+AtroCore enables you to define custom views for certain entity types. It must be set in `app/Resources/metadata/clientDefs` folder. Here is the example `app/Resources/metadata/clientDefs/Test.json`:
 
 ```
     {
@@ -161,6 +161,7 @@ AtroCore give you an abilities to define custom views for certain entity types. 
 **Record list view** `example-module:views/test/record/list` contains only rows of records.
 
 ### Composer file
+Composer file in the module root directory creates configuration for composer which looks like:
 ```
     
     {
@@ -170,32 +171,35 @@ AtroCore give you an abilities to define custom views for certain entity types. 
         },
         "autoload": {
             "psr-4": {
-                "TestModule\\": "app/"
+                "ExampleModule\\": "app/"
             }
         },
         "extra": {
-            "treoId": "TestModule",
+            "treoId": "ExampleModule",
             "name": {
-                "default": "TestModule"
+                "default": "ExampleModule"
             },
             "description": {
-                "default": "Test module."
+                "default": "Example Module."
             }
         }
     }
 ```
 
-There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system. `name` and `description` in accordance are name and description of module in Module Manager.
+`treoId` contains the unique name of the module for its identification in the system. `name` and `description` are used to show the module in the section `Administration > System > Update & Modules`.
 
-## Module installation
+## Module Installation
 
-Modules installation is carried out from the Module Manager located at `Administration > System > Update & Modules` page. To make your module to be available for installation in the modules list , you need to perform certain actions, which will be described below.
+Modules installation is carried out from the Module Manager located at `Administration > System > Update & Modules` page. To mark your module to be installed, you need to perform certain actions, which will be described below.
 
-> Should be noted that modules installation in AtroCore is based on Composer. You can get detailed information about Composer following the link https://getcomposer.org.
+> Module installation in AtroCore is based on Composer. You can get detailed information about Composer by the following link https://getcomposer.org.
 
-In our modules store showed modules that we had registered in our private repository. In future we will create a possibility to add your own modules in the store. At this moment you can install your module only adding requirement in your composer.json file, that was stored in your project root directory.
+Module store shows all available modules, which are registered in our repository. 
+> In the future we will enable our solution partners to add your own modules to our module store. At this moment you can install your own module only by adding it as required in your composer.json file, that is stored in your project root directory.
 
 In your git or other VCS repository add and commit the `composer.json` file. Structure of it described in this paragraph - [Composer file](#composer-file).
+
+###  Creating first release of your module
 
 Next create your first stable release.
 
