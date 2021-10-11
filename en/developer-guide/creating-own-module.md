@@ -1,6 +1,8 @@
 # Modules creating
 
 ## Overview
+In this tutorial you will learn how to develop and use own module for AtroCore software development platform.
+We have created and ex
 
 You can get acquainted with the module example by following the link: https://github.com/atrocore/test-module. Module consist of backend and frontend parts. Next will be detailed describe a module structure.
 
