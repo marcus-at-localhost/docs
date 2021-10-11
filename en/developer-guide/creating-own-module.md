@@ -24,21 +24,23 @@ As you can see module consist of two main folders - `app`, where the backend par
   - `i18n` - contain modules translations
   - `layouts` - contain module layouts
   - `metadata` - contain module metadata, which are available in the backend as instance of `Espo\Core\Utils\Metadata` class from container
-  >   To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
+  > To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
   Second argument means default value. In frontend metadata object is accessible from all views object by method `getMatedata`.
   For example `this.getMetadata().get(['entityDefs', 'Test', 'fields', 'name', 'type'])`.
   Metadata has next sections:
-    - `app` - application definitions.
-    - `clientDefs` - frontend parameters for entities types.
-    - `entitiyDefs` - entity defsinitions such as fields, links, indexes.
-    - `scopes` - general parameters for entities types.
-    - `fields` - fields type definitions.
-- `Servies` - main business logic to work with data. A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. Main methods of the Record service are:
-  - `readEntity` - get an entity data.
-  - `createEntity` - create new entity.
-  - `updateEntity` - update entity data.
-  - `deleteEntity` - delete entity.
-  - `findEntities` - get list of entities by search params, used in list view.
+    - `app` - application definitions
+    - `clientDefs` - frontend parameters for entity types
+    - `entitiyDefs` - entity definitions such as fields, links, indexes
+    - `scopes` - general parameters for entity types
+    - `fields` - field type definitions
+- `Servies` - main business logic to work with data 
+> A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. 
+- Main methods of the Record service are:
+  - `readEntity` - get an entity record
+  - `createEntity` - create new entity record
+  - `updateEntity` - update entity record
+  - `deleteEntity` - delete entity record
+  - `findEntities` - get list of entities by search parameters, used in list view
   - `findLinkedEntities` - get list of related entities, used in relationship panels.
 
 ### Module.php
