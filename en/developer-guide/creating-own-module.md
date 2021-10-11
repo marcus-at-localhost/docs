@@ -1,31 +1,30 @@
 # Modules creating
 
 ## Overview
-In this tutorial you will learn how to develop and use own module for AtroCore software development platform.
-We have created and ex
-
-You can get acquainted with the module example by following the link: https://github.com/atrocore/test-module. Module consist of backend and frontend parts. Next will be detailed describe a module structure.
+In this tutorial you will learn how to create and install your own module for AtroCore software development platform.
+Example module we refer to in this guide can be found here: https://github.com/atrocore/test-module
 
 ## Module structure
+Module consist of backend and frontend parts.
 
 ![Module structure](../../_assets/developer-guide/module-creating/module-structure.png)
 
-As you can see module consist of two main folders - `app`, where is all backend, and `client` - where is frontend part. In root module folder can contain such files as composer files, markdown files, git files, etc.
+As you can see module consist of two main folders - `app`, where the backend part is stored, and `client` - where the frontend part is stored. The root module folder should contain composer file with all information about the module as well as all its dependencies and may contain any other files such as markdown files, git files, etc.
 
 ### Backend folder
 
-Next will describe `app` folder structure:
+`app` folder has the following structure:
 
-- `Module.php` - main module class where are described module configuration such as module load order, path to files, loading metadata and layouts, etc.
-- `Controllers` - contains the controllers of the module.
-- `Entities` - folder with ORM entity classes.
-- `Listeners` - event listeners classes.
+- `Module.php` - main module class where module configuration (module load order, path to files, loading metadata and layouts, etc.) is described
+- `Controllers` - contains the controllers of the module
+- `Entities` - folder with ORM entity classes
+- `Listeners` - event listener classes
 - `Repositories` - stores entities repositories where are contain queries logic.
 - `Resources` - has several subfolders such as:
-  - `i18n` - modules translations.
-  - `layouts` - module layouts.
-  - `metadata` - module metadata. In backend available as instance of `Espo\Core\Utils\Metadata` class from container. 
-  To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
+  - `i18n` - contain modules translations
+  - `layouts` - contain module layouts
+  - `metadata` - contain module metadata, which are available in the backend as instance of `Espo\Core\Utils\Metadata` class from container
+  >   To get data from metadata use such way `$metadata->get(['entityDefs', 'Test', 'fields', 'name', 'type'], 'varchar')`.
   Second argument means default value. In frontend metadata object is accessible from all views object by method `getMatedata`.
   For example `this.getMetadata().get(['entityDefs', 'Test', 'fields', 'name', 'type'])`.
   Metadata has next sections:
