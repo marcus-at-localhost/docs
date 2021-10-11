@@ -62,17 +62,17 @@ It has only one required method that must be realized - `getLoadOrder`. It must 
 
 All client files are saved in two main folders - `templates`, where all module templates files are stored, and `src` that contain logic that will run on the client side.
 
-Frontend uses Backbone.js framework. You can explore its documentation via this link: https://backbonejs.org.
+Backbone.js framework is used. You can explore its documentation via this link: https://backbonejs.org.
 
-Basically, the frontend uses the view. Every page is rendered by multiple view objects. Every views can have their child views as child can have their own views. When view is rendered it has all HTML of his child views.
+The frontend uses views. Every page is rendered by using multiple view objects. Every view can have its child views and child can have its own views. ***When view is rendered it has all HTML of his child views.***
 
-There is example of view `client/modules/test-module/src/views/test/record/detail.js`:
+Here is the example of view `client/modules/example-module/src/views/test/record/detail.js`:
 ```
-    Espo.define('test-module:views/test/record/detail', 'views/record/detail',
+    Espo.define('example-module:views/test/record/detail', 'views/record/detail',
         Dep => Dep.extend({
     
             // template file
-            template: 'test-module:test/record/detail',
+            template: 'example-module:test/record/detail',
     
             // handlers of DOM events
             events: {
@@ -88,7 +88,7 @@ There is example of view `client/modules/test-module/src/views/test/record/detai
     
                 // create child view with options parameters
                 // rendering of parent view will be delayed until child view is loaded
-                this.createView('someView', 'test-module/test/some-view', {
+                this.createView('someView', 'example-module/test/some-view', {
                     key1: 'value1',
                     key2: 'value2'
                 });
@@ -129,7 +129,7 @@ There is example of view `client/modules/test-module/src/views/test/record/detai
         })
     );
 ```
-Template file `client/modules/test-module/res/templates/test/record/detail.tpl`:
+Template file `client/modules/example-module/res/templates/test/record/detail.tpl`:
 
 ```
     <div class="some-class">{{key1}}</div>
@@ -142,29 +142,29 @@ AtroCore give you an abilities to define custom views for certain entity types. 
         "controller": "pim:controllers/product",
         "iconClass": "fas fa-square",
         "views": {
-            "list": "test-module:views/test/list",
-            "detail": "test-module:views/test/detail"
+            "list": "example-module:views/test/list",
+            "detail": "example-module:views/test/detail"
         },
         "recordViews": {
-            "list": "test-module:views/test/record/list",
-            "detail": "test-module:views/test/record/detail"
+            "list": "example-module:views/test/record/list",
+            "detail": "example-module:views/test/record/detail"
         }
     }
 ```
 
-**Detail view** `test-module:views/test/detail` contains all panels, relations, header bar with buttons in the top-right corner.
+**Detail view** `example-module:views/test/detail` contains all panels, relations, header bar with buttons in the top-right corner.
 
-**Record detail view** `test-module:views/test/record/detail` contains all the above except header bar.
+**Record detail view** `example-module:views/test/record/detail` contains all the above except header bar.
 
-**List view** `test-module:views/test/list` contains Record List view, header and Search row view.
+**List view** `example-module:views/test/list` contains Record List view, header and Search row view.
 
-**Record list view** `test-module:views/test/record/list` contains only rows of records.
+**Record list view** `example-module:views/test/record/list` contains only rows of records.
 
 ### Composer file
 ```
     
     {
-        "name": "atrocore/test-module",
+        "name": "atrocore/example-module",
         "require": {
             "atrocore/core": "~1.3.12"
         },
@@ -205,7 +205,7 @@ You need to add a repository that contains your module. If your module stored in
 ```
     {
         "type": "git",
-        "url": "https://github.com/atrocore/test-module"
+        "url": "https://github.com/atrocore/example-module"
     }
 ```
 
@@ -217,7 +217,7 @@ When you will have personal access token add next block in `repositories` key:
 ```
     {
         "type": "git",
-        "url": "https://username:usertoken@github.com/atrocore/test-module"
+        "url": "https://username:usertoken@github.com/atrocore/example-module"
     }
 ```
 
