@@ -35,7 +35,7 @@ As you can see module consist of two main folders - `app`, where the backend par
     - `fields` - field type definitions
 - `Servies` - main business logic to work with data 
 > A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. 
-- Main methods of the Record service are:
+Main methods of the Record service are:
   - `readEntity` - get an entity record
   - `createEntity` - create new entity record
   - `updateEntity` - update entity record
