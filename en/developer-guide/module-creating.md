@@ -2,7 +2,7 @@
 
 ## Overview
 
-Modules in Atro help extend or change of exist functionality. Module consist of backend and frontend parts. Next will be detailed describe a module structure.
+You can get acquainted with the module example by following the link: https://github.com/atrocore/test-module. Module consist of backend and frontend parts. Next will be detailed describe a module structure.
 
 ## Module structure
 
@@ -186,27 +186,35 @@ Modules installation is carried out from the Module Manager located at `Administ
 
 In our modules store showed modules that we had registered in our private repository. In future we will create a possibility to add your own modules in the store. At this moment you can install your module only adding requirement in your composer.json file, that was stored in your project root directory.
 
-First of all, you need to add your module to the packages repository.
-
-> To can get more information about repositories, following this link https://getcomposer.org/doc/05-repositories.md
-
-You can use main composer repository - Packagist (https://packagist.org). Keep in mind, that using Packagist, your module will be in public access. But you also can use any other private repository.
-
 In your git or other VCS repository add and commit the `composer.json` file. Structure of it described in this paragraph - [Composer file](#composer-file).
 
 Next create your first stable release.
 
 ![Release create](../../_assets/developer-guide/module-creating/git-releases.png)
 
-Go the your packages repository site and log in or register. After you can submit your package. After you entered your public repository URL it will be checked.
+You need to add a repository that contains your module. If your module stored in public GitHub repository, add next block in `repositories` key in `composer.json` file:
 
-![Submit package](../../_assets/developer-guide/module-creating/submit-package.png)
+    {
+        "type": "git",
+        "url": "https://github.com/atrocore/test-module"
+    }
 
-In success, you will see package administration  page. There you can manage your package, see information about it, available versions, etc.
+For private repositories first you must generate access token for your GitHub account.
 
-![Package page](../../_assets/developer-guide/module-creating/packagist.png)
+> Follow the link https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token to know about how create personal access token to GitHub.
 
-Now open project `composer.json` file and in `require` section add your module package name.
+When you will have personal access token add next block in `repositories` key:
+
+    {
+        "type": "git",
+        "url": "https://username:usertoken@github.com/atrocore/test-module"
+    }
+
+, where `username` - your GitHub username, `usertoken` - your created in previous step personal access token.
+
+> Instead GitHub you can use any VCS. You can get detailed information following the link: https://getcomposer.org/doc/05-repositories.md#vcs
+
+Now in project `composer.json` file in `require` section add your module package name.
 
 ![Adding depandency](../../_assets/developer-guide/module-creating/adding-dependency-on-module.png)
 
