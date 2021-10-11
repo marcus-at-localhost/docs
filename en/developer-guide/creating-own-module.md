@@ -56,18 +56,18 @@ Here is a simple code example for module class.
     }
 ```
 
-It has only one required method that must be realized - `getLoadOrder`. It must return integer value that point in module load order. A higher value indicates that the module will be loaded later.
+It has only one required method that must be realized - `getLoadOrder`. It must return an integer value that point in module load order. A higher value indicates that the module will be loaded later.
 
 ### Frontend folder
 
-All client files save in two main folders - `templates`, where are all module templates files, and `src`, that contain logic that will be work on client side.
+All client files are saved in two main folders - `templates`, where all module templates files are stored, and `src` that contain logic that will run on the client side.
 
-For frontend used Backbone.js library. You can explore it in detail by following the next link to the documentation: https://backbonejs.org.
+Frontend uses Backbone.js framework. You can explore its documentation via this link: https://backbonejs.org.
 
 Basically, the frontend uses the view. Every page is rendered by multiple view objects. Every views can have their child views as child can have their own views. When view is rendered it has all HTML of his child views.
 
 There is example of view `client/modules/test-module/src/views/test/record/detail.js`:
-
+```
     Espo.define('test-module:views/test/record/detail', 'views/record/detail',
         Dep => Dep.extend({
     
@@ -128,14 +128,16 @@ There is example of view `client/modules/test-module/src/views/test/record/detai
             }
         })
     );
-
+```
 Template file `client/modules/test-module/res/templates/test/record/detail.tpl`:
 
+```
     <div class="some-class">{{key1}}</div>
     <a class="action" data-action="save">Save</a>
-
+```
 AtroCore give you an abilities to define custom views for certain entity types. It must be set in `app/Resources/metadata/clientDefs` folder. There is example `app/Resources/metadata/clientDefs/Test.json`:
 
+```
     {
         "controller": "pim:controllers/product",
         "iconClass": "fas fa-square",
@@ -148,6 +150,7 @@ AtroCore give you an abilities to define custom views for certain entity types. 
             "detail": "test-module:views/test/record/detail"
         }
     }
+```
 
 **Detail view** `test-module:views/test/detail` contains all panels, relations, header bar with buttons in the top-right corner.
 
@@ -158,6 +161,7 @@ AtroCore give you an abilities to define custom views for certain entity types. 
 **Record list view** `test-module:views/test/record/list` contains only rows of records.
 
 ### Composer file
+```
     
     {
         "name": "atrocore/test-module",
@@ -179,6 +183,7 @@ AtroCore give you an abilities to define custom views for certain entity types. 
             }
         }
     }
+```
 
 There is nothing unusual here. It is only necessary to note, the `treoId` key - it contains the unique name of the module for its identification in system. `name` and `description` in accordance are name and description of module in Module Manager.
 
@@ -197,22 +202,24 @@ Next create your first stable release.
 ![Release create](../../_assets/developer-guide/module-creating/git-releases.png)
 
 You need to add a repository that contains your module. If your module stored in public GitHub repository, add next block in `repositories` key in `composer.json` file:
-
+```
     {
         "type": "git",
         "url": "https://github.com/atrocore/test-module"
     }
+```
 
 For private repositories first you must generate access token for your GitHub account.
 
 > Follow the link https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token to know about how create personal access token to GitHub.
 
 When you will have personal access token add next block in `repositories` key:
-
+```
     {
         "type": "git",
         "url": "https://username:usertoken@github.com/atrocore/test-module"
     }
+```
 
 , where `username` - your GitHub username, `usertoken` - your created in previous step personal access token.
 
