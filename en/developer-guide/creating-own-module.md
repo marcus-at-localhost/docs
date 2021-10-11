@@ -33,7 +33,7 @@ As you can see module consist of two main folders - `app`, where the backend par
      - `entitiyDefs` - entity definitions such as fields, links, indexes
      - `scopes` - general parameters for entity types
      - `fields` - field type definitions
-- `Servies` - main business logic to work with data 
+- `Services` - main business logic to work with data 
 > A record service handles CRUD operations over entities. They extend base class `Espo\Services\Record`. 
 - Main methods of the Record service are:
     - `readEntity` - get an entity record
@@ -45,8 +45,8 @@ As you can see module consist of two main folders - `app`, where the backend par
 
 ### Module.php
 
-There is simple code example for Module class.
-
+Here is a simple code example for module class.
+```
     class Module extends AbstractModule
     {
         public static function getLoadOrder(): int
@@ -54,6 +54,7 @@ There is simple code example for Module class.
             return 9999;
         }
     }
+```
 
 It has only one required method that must be realized - `getLoadOrder`. It must return integer value that point in module load order. A higher value indicates that the module will be loaded later.
 
