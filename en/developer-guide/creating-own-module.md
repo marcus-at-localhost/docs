@@ -139,7 +139,7 @@ AtroCore enables you to define custom views for certain entity types. It must be
 
 ```
     {
-        "controller": "pim:controllers/product",
+        "controller": "controllers/record",
         "iconClass": "fas fa-square",
         "views": {
             "list": "example-module:views/test/list",
