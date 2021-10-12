@@ -1,4 +1,4 @@
-# How to create own module
+# Creating Own Module
 
 ## Overview
 In this tutorial you will learn how to create and install your own module for AtroCore software development platform.
