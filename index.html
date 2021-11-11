@@ -15,27 +15,20 @@
   <div id="app"></div>
   <script>
 
-      // Set html "lang" attribute based on URL
-      var lang = location.hash.match(/#\/(de)\//);
+    window.$docsify = {
 
-      if (lang) {
-        document.documentElement.setAttribute('lang', lang[1]);
-      }
+      repo: 'atrocore/docs',
 
-      window.$docsify = {
-
-        repo: 'atrocore/docs',
-
-        auto2top: true,
-        coverpage: true,
-        executeScript: true,
-        loadSidebar: true,
-        loadNavbar: false,
-        mergeNavbar: true,
-        maxLevel: 4,
-        subMaxLevel: 3,
-        name: 'Help Center',
-        relativePath: true,
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: false,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 3,
+      name: 'Help Center',
+      relativePath: true,
 
       // complete configuration parameters
       search: {
@@ -71,12 +64,11 @@
         //
         // When initialiazing an index, we look for the first path from the sidebar.
         // If it matches the prefix from the list, we switch to the corresponding index.
-        pathNamespaces: ['/de'],
-        toc: {
+        pathNamespaces: ['/de']
+      },
+      toc: {
           tocMaxLevel: 2,
           target: 'h2, h3, h4, h5, h6'
-        },
-
       }
     }
   </script>
