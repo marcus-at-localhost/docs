@@ -1,6 +1,6 @@
 - [FAQ](./)
-   - [Administration](Administration.md)
-   - [Consulting Implementation and Support](support.md)
+   - [Administration](administration.md)
+   - [Consulting Implementation and Support](consulting-implementation-and-support.md)
    - [Costs](costs.md)
    - [Data Exchange](data-exchange.md)
    - [General](general.md)
