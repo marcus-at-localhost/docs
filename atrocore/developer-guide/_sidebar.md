@@ -1,5 +1,5 @@
-# AtroCore Developer Guide
-
-- [AtroCore](../)
+- [Admin Guide](../admin-guide)
+- [User Guide](../user-guide/)
+- [Developer Guide](./)
    - [Creating Own Module](creating-own-module.md)
    - [REST API](rest-api.md)

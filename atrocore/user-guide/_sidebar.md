@@ -1,6 +1,5 @@
-# AtroCore User Guide
-
-- [AtroCore](../)
+- [Admin Guide](../admin-guide/)
+- [User Guide](./)
    - [What is AtroCore?](what-is-atrocore.md)
    - [User Interface](user-interface.md)
    - [Views and Panels](views-and-panels.md)
@@ -8,4 +7,5 @@
    - [Search and Filtering](search-and-filtering.md)
    - [Stream](stream.md)
    - [Multilingualism](multilingualism.md)
-   
+- [Developer Guide](../developer-guide/)
+
