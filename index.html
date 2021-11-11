@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+
 
 </head>
 <body>
@@ -71,9 +73,10 @@
         // If it matches the prefix from the list, we switch to the corresponding index.
         pathNamespaces: ['/de'],
         toc: {
-          tocMaxLevel: 5,
-          target: 'h2, h3, h4, h5, h6'
-       },
+          scope: '.markdown-section',
+          headings: 'h1, h2, h3, h4, h5, h6',
+          title: 'Table of Contents',
+        },
 
       }
     }
