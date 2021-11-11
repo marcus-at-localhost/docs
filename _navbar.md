@@ -1,3 +1,3 @@
 - Translations
   - [:uk: English](/)
-  - [:de: Deutsch (nicht unterstützt)](/de/)
+  - [:de: Deutsch](/de/)
