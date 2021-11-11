@@ -5,7 +5,7 @@
 
 > Please note, as AtroPIM extends AtroCore everything described for AtroCore is valid to AtroPIM too.
 
-## Table of Contents:
+## Table of Contents
 
 - [Home](/)
 - [AtroCore](atrocore/)
