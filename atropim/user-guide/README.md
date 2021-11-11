@@ -5,7 +5,7 @@
 - [User Interface](user-interface.md)
 - [Views and Panels](views-and-panels.md)
 - [Associated Products](associated-products.md)
-- [Associations](assoications.md)
+- [Associations](associations.md)
 - [Attribute Groups](attribute-groups.md)
 - [Attributes](attributes.md)
 - [Brands](brands.md)
