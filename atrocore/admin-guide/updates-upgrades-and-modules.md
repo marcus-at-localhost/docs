@@ -1,4 +1,4 @@
-## Modules Manager
+## Updates, Upgrades and Modules
 
 The Modules Manager mechanism is available for you in AtroCore to install, update, and remove modules – extensions that add new or expand the existing functionality.
 
