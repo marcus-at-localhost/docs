@@ -1,5 +1,5 @@
 - [AtroCore](./)
     - [Admin Guide](admin-guide/)
     - [User  Guide](user-guide/)
-    - [DEveloper  Guide](developer-guide/)
+    - [Developer  Guide](developer-guide/)
 - [AtroPIM](../atropim/)
