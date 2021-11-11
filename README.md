@@ -7,7 +7,6 @@
 
 ## Table of Contents
 
-- [Home](/)
 - [AtroCore](/atrocore/)
    - [Admin Guide](/atrocore/admin-guide/)
       - [Installation](/atrocore/admin-guide/installation.md)
