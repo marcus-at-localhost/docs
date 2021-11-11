@@ -117,6 +117,6 @@ CREATE USER 'atrocore_user'@'localhost' IDENTIFIED BY 'atrocore_password';
 GRANT ALL ON atrocore.* TO atrocore_user@localhost WITH GRANT OPTION;
 ```
 
-### 8. Go to http://YOUR_PROJECT/ to start the installation wizard 
+### 8. Go to your Project URL to start the installation wizard 
 
-Start the installation wizard for your AtroCore Application in the web interface. Follow the instructions in the wizard.
+Start the installation wizard for your AtroCore Application in the web interface from your URL: http://YOUR_PROJECT/ . Follow the instructions in the wizard.
