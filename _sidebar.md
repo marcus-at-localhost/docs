@@ -7,4 +7,5 @@
    - [User Guide](/atropim/user-guide/)
    - [How Tos](/atropim/how-tos/)
    - [FAQ](/atropim/faq/)
+- [Brands](/atropim/user-guide/brands.md)
    
