@@ -2,7 +2,7 @@
 
 ![logo](logo.png)
 
-# AtroCore Help Center
+# Help Center
 
 > Welcome to our Help Center! Here you will find:
 
