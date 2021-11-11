@@ -74,9 +74,8 @@
         // If it matches the prefix from the list, we switch to the corresponding index.
         pathNamespaces: ['/de'],
         toc: {
-          //scope: '.markdown-section',
-          headings: 'h1, h2, h3, h4, h5, h6',
-          title: 'Table of Contents',
+          tocMaxLevel: 5,
+          target: 'h2, h3, h4, h5, h6'
         },
 
       }
@@ -84,7 +83,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-toc"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
