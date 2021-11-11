@@ -12,7 +12,7 @@
 - FAQs
 - Developer Guides
 
-Please use the search bar in the top left corner of the side navigation, if you want to find something specific.
+Please use the search bar in the top left corner, if you want to find something specific.
 
 [GitHub](https://github.com/atrocore)
 [Get Started](#atrocore documentation)
