@@ -7,6 +7,3 @@
    - [User Guide](/atropim/user-guide/)
    - [How Tos](/atropim/how-tos/)
    - [FAQ](/atropim/faq/)
-
-[filename](./README.md ':include')
-   
