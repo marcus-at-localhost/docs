@@ -33,23 +33,20 @@
       name: 'Help Center',
       relativePath: true,
 
+      search: 'auto', // default
+
+      search : [
+        '/',            // => /README.md
+        '/guide',       // => /guide.md
+        '/get-started', // => /get-started.md
+        '/zh-cn/',      // => /zh-cn/README.md
+      ],      
       // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto', // or 'auto'
-        placeholder: 'Type to search',
-  
-        // Localization
-        placeholder: {
-          '/': 'Type to search'
-        },
-  
+        placeholder: 'Type to search',  
         noData: 'No Results!',
-  
-        // Localization
-        noData: {
-          '/': 'No Results'
-        },
   
         // Headline depth, 1 - 6
         depth: 6,
@@ -72,11 +69,6 @@
           target: 'h2, h3, h4, h5, h6'
       }
 
-      //toc: {
-      //  scope: '.markdown-section',
-      //  headings: 'h1, h2, h3, h4, h5, h6',
-      //  title: 'Table of Contents',
-      //}
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
