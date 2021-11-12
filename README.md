@@ -1,9 +1,9 @@
 # AtroCore Help Center
 
-- [AtroCore](atrocore/) - Read the Guides, How to's and FAQs concerning AtroCore Software Platform
-- [AtroPIM](atropim/) - Read the Guides, How to's and FAQs concerning AtroPIM, which extends AtroCore.
+- [AtroCore](/atrocore/) - Read the Guides, How to's and FAQs concerning AtroCore Software Platform.
+- [AtroPIM](/atropim/) - Read the Guides, How to's and FAQs concerning AtroPIM.
 
-> Please note, as AtroPIM extends AtroCore everything described for AtroCore is valid to AtroPIM too.
+> Please note, AtroPIM and AtroDAM extend AtroCore, thus everything described for AtroCore is valid to AtroPIM and AtroDAM too.
 
 ## Table of Contents
 
