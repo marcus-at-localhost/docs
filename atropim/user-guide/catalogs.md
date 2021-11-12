@@ -1,4 +1,4 @@
-# CATALOGS
+# Catalogs
 
 **Catalog** – a container for your [products](./products.md) arranged by certain criteria, i.e. it is a set of data at a given time compiled to be transferred via certain [channels](./channels.md). Catalog's content may be modified whenever needed within the [AtroPIM system](./what-is-atropim.md).
 
