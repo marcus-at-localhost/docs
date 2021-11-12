@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { getAndRemoveConfig } from '../../core/render/utils';
+//import { getAndRemoveConfig } from '../../core/render/utils';
+import { getAndRemoveConfig } from 'https://cdn.jsdelivr.net/npm/docsify@4/core/render/utils';
 
 let INDEXS = {};
 
