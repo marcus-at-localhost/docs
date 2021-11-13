@@ -10,7 +10,7 @@
 - [AtroCore](/atrocore/)
    - [Admin Guide](/atrocore/admin-guide/)
       - [Installation](/atrocore/admin-guide/installation.md)
-  13: - [Update](/atrocore/admin-guide/update.md)
+      - [Update](/atrocore/admin-guide/update.md)
       - [Module Installation](/atrocore/admin-guide/module-installation.md)
       - [Multilingualism](/atrocore/admin-guide/multilingualism.md)
       - [Web Server Preparation: Apache](/atrocore/admin-guide/web-server-preparation-apache.md)
