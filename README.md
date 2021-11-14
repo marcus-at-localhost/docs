@@ -66,6 +66,8 @@
       - [Dashboards and Dashlets](/atropim/user-guide/dashboards-and-dashlets.md)
       - [Product Families](/atropim/user-guide/product-families.md)
       - [Products](/atropim/user-guide/products.md)
+   - [Modules](/modules/)
+      - [Advanced Navigation](/modules/advanced-navigation.md)
 
 **This work is licensed under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)**.
 
