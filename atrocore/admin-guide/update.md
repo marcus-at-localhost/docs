@@ -2,7 +2,7 @@
 
 In AtroCore system you can install, update, and remove modules directly from the admin area.
 
-To do it you need to go to "Administration > Update & Modules" page.
+To do it you need to go to "Administration > Module Manager" page.
 
 ![modules_manager](../_assets/administration/module-manager/module_manager_en.png)
 
@@ -27,6 +27,8 @@ As you can see, this page consists of three panels:
 ## System Update
 To update the system click on the "Update" button. The system and all installed modules will be automatically updated. Bevor update is done the system maka a backup of itself and the database, to be able to be restored in case of unexpected problems.
 
-> Please note, backup of your assets (files, which are stored in the system) is not made.
+> Please note, backup of your assets (files, which are stored in the system) is not done.
+
+## Consideration of the Dependencies
 
 During the update process the system installs the latest available module versions. It is possible, that some modules wil not be updated to the latest available version. The reason for it is the incompatibility of some of your modules with the newest version of the module you try to install.

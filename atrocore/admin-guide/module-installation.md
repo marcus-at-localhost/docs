@@ -4,7 +4,7 @@ Prior to installation, make sure that the module has the **available** status.
 
 To install a module:
 
-1. Go to Administration > Update & Modules.
+1. Go to "Administration > Module Manager".
 
 2. Open the drop-down menu of the module to be installed:
 
@@ -30,7 +30,7 @@ To update modules click an the button "Update". All the modules will be automati
 
 To delete a module from the system:
 
-1. Go to Administration > Update & Modules.
+1. Go to "Administration > Module Manager".
 2. Open the drop-down menu of the desired module from the "Installed" panel.
 3. Click the "Delete" button.
 4. Click on the button "Update".
