@@ -1,3 +1,4 @@
 # Module Documentation
 
-- [Advanced Navigation](/modules/advanced-navigation.md)
+- [Advanced Navigation](./advanced-navigation.md)
+- [Azure Active Directory SSO](./azure-active-directory-sso.md)

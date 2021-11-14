@@ -1,4 +1,5 @@
 - [AtroCore](../atrocore/)
 - [AtroPIM](../atrocore/)
 - [Modules](./)
-    - [Advanced Navigation](advanced-navigation.md)
+    - [Advanced Navigation](./advanced-navigation.md)
+    - [Azure Active Directory SSO](./azure-active-directory-sso.md)
