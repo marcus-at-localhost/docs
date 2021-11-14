@@ -10,3 +10,4 @@
 - [Modules](/modules/)
    - [Advanced Navigation](/modules/advanced-navigation.md)
    - [Azure Active Directory SSO](/modules/azure-active-directory-sso.md)
+   - [Completeness](/modules/completeness.md)

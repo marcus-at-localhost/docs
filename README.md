@@ -69,6 +69,7 @@
    - [Modules](/modules/)
       - [Advanced Navigation](/modules/advanced-navigation.md)
       - [Azure Active Directory SSO](/modules/azure-active-directory-sso.md)
+      - [Completeness](/modules/completeness.md)
 
 **This work is licensed under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)**.
 
