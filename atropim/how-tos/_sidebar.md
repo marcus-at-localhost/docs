@@ -11,4 +11,4 @@
     - [How to use the catalogs and channels](how-to-use-the-catalogs-and-channels.md)
     - [How to use the workflows](how-to-use-the-workflows.md)
     - [Product description in 6 steps](product-description-in-6-steps.md)
-- [User Guide](../user-guide)
+- [User Guide](../user-guide/)
