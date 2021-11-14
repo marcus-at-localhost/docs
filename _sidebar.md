@@ -12,3 +12,4 @@
    - [Azure Active Directory SSO](/modules/azure-active-directory-sso.md)
    - [Completeness](/modules/completeness.md)
    - [Discussions](/modules/discussions.md)
+   - [Export Feeds](/modules/export-feeds.md)
