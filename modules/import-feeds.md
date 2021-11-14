@@ -22,13 +22,13 @@ You will be able to create a scheduled job for your import tasks only if the app
 ## Administrator Functions
 
 After the module installation two new entities will be created in your system - `Import Feeds` and `Import Results`. Via `Administration > System > User Interface` you can add these items to the navigation of your system if it did not happen automatically.
-![Import feeds adding](_assets/import-feeds-admin-layout-manager.png)
+![Import feeds adding](_assets/import-feeds/import-feeds-admin-layout-manager.png)
 
 ### Access Rights
 
 To enable import feed creation, editing, usage and deletion by other users, configure the corresponding access rights to the `Import feeds` and `Import results` entities for the desired user/team/portal user role on the `Administration > Roles > *Role name*` page: 
 
-![Import role cfg](_assets/import-feeds-admin-roles.png)
+![Import role cfg](_assets/import-feeds/import-feeds-admin-roles.png)
 
 Please, note that enabling at least `Import feeds` read permission for the user is a required minimum for him to be able to run import feed.
 
@@ -43,7 +43,7 @@ To create a new import feed, click `Import Feeds` in the navigation menu and the
 > If there is no `Import Feeds` option in the navigation menu, please, contact your administrator.
 
 The standard form for the import feed creating appears:
-![Import feed creation](_assets/import-feeds-create.png)
+![Import feed creation](_assets/import-feeds/import-feeds-create.png)
 
 Here fill in the required fields and select the import feed type from the corresponding drop-down list. This module adds only **CSV File** type.
 Click the `Save` button. The new record will be added to the import feeds list. You can configure it right away on the detail view page that opens or return to it later.
@@ -51,7 +51,7 @@ Click the `Save` button. The new record will be added to the import feeds list. 
 ### Overview panel
 
 Overview panel enables you to define the main feed parameters (name, action, activity etc):
-![Import feed cfg](_assets/import-feeds-create-overview.png)
+![Import feed cfg](_assets/import-feeds/import-feeds-create-overview.png)
 
 The following settings are available here:
 
@@ -68,7 +68,7 @@ The following settings are available here:
 
 The import file parameters are configured on the `FILE PROPERTIES` panel:
 
-![Import feed cfg file](_assets/import-feeds-create-file-properties.png)
+![Import feed cfg file](_assets/import-feeds/import-feeds-create-file-properties.png)
 
 - **File** – here you can upload the file which is to be imported or its shortened version (as a sample), which will be used for the configuration. The file should be UTF-8 encoded. 
 - **Header row** – activate the checkbox if the column names are included in the import file or leave it empty if the file to be imported has no header row with column names.
@@ -81,7 +81,7 @@ The import file parameters are configured on the `FILE PROPERTIES` panel:
 
 The next panel is the settings panel:
 
-![Simple type settings](_assets/import-feeds-create-settings.png)
+![Simple type settings](_assets/import-feeds/import-feeds-create-settings.png)
 
 - **Entity** – select the desired entity for the imported data from the drop-down list of all entities available in the system.
 - **Unused Columns** – this field is initially empty. After save you will see here the list of available unmapped columns.
@@ -95,7 +95,7 @@ If you import product data, some products may have certain attributes, other not
 
 After the file is uploaded and file settings are properly configured you should see column names from your file in the field `Unused Columns`.
 
-![unused_columns](_assets/import-feeds-configurator-unused-columns.png)
+![unused_columns](_assets/import-feeds/import-feeds-configurator-unused-columns.png)
 
 
 If the `Unused Columns` field is empty after saving your feed, you should check your field delimiter for correctness. If some column names have single or double quotes you may have set the wrong text qualifier.
@@ -105,15 +105,15 @@ If the `Unused Columns` field is empty after saving your feed, you should check 
 ## Configurator
 Configurator can be used after the import feed is created. Initially this panel is empty. This panel displays mapping rules for your data import.
 
-![Configurator panel](_assets/import-feeds-configurator.png)
+![Configurator panel](_assets/import-feeds/import-feeds-configurator.png)
 
 To create a new entry, click on the `+` icon in the upper right corner. A popup window appears.
 
-![Configurator panel](_assets/import-feeds-configurator-new.png)
+![Configurator panel](_assets/import-feeds/import-feeds-configurator-new.png)
 
 - **Type** – choose the type of your mapping rule by selection "Field" of "Attribute" in the field `Type`. The option "Attribute" is available only for product entity.
 
-![Configurator panel](_assets/import-feeds-configurator-new-type.png)
+![Configurator panel](_assets/import-feeds/import-feeds-configurator-new-type.png)
 
 - **Field** – choose the field for your selected entity field for data to be imported from the selected column(s).
 - **Identifier** – set this checkbox if the value in the selected column should be interpreted as an identifier. You can select multiple columns as identifier.
@@ -126,12 +126,12 @@ Click on "Save" button to save the mapping rule.
 
 To modify the mapping rule displayed on the `Configurator` panel, use the `Edit` option from the single record actions menu. Here you can also delete the selected rule.
 
-![Configurator panel](_assets/import-feeds-configurator-menu.png)
+![Configurator panel](_assets/import-feeds/import-feeds-configurator-menu.png)
 
 ### Identifier
 For each field you can define whether it is the identifier or not. All identifiers are used together in search for a data record in the database. E.g. if you choose "Name" and "Brand" as identifier for an import to the product entity, the system will try to find such a product by using the cell values for these two fields. If some data record is found, it will be updated with the values which come from the import file. If more than one data record is found, you will get an error and import will not be executed.
 
-![Configurator identifier](_assets/import-feeds-configurator-identifiers.png)
+![Configurator identifier](_assets/import-feeds/import-feeds-configurator-identifiers.png)
 
 ### Default Value
 For any mapping rule the column(s) or default value or both should be filled. Thus, it is possible to set the default value without choosing the column(s). In this case this value will be applied to all data records. For example, you can set a value for a "Catalog". If you would import product data, all the products will be automatically assigned to the selected catalog, even if you import file have no column for a "Catalog". If "default value" is left empty or no value is set, no default value will be applied as value.
@@ -139,12 +139,12 @@ For any mapping rule the column(s) or default value or both should be filled. Th
 ### Attributes
 Only product entity has attributes. All products have the same fields but may have different attributes (attribute can be seen as a dynamic field). Only attributes can have channel-specific values. To create a mapping rule for some attribute you need to select by "Type" "Attribute" as a value. Set the Scope to "Global" if you want that the value to be imported should be set as a global attribute value. If you want that this value for the attribute should be set as a channel-specific value, you need to set the "Scope" to "Channel" and select the appropriate channel in the next field.  
 
-![Configurator attributes](_assets/import-feeds-configurator-new-attribute.png)
+![Configurator attributes](_assets/import-feeds/import-feeds-configurator-new-attribute.png)
 
 ### Marking attributes as not linked
 You can import product data for product fields and product attributes simultaneously. In this case product fields and product attributes will be columns in your file to be imported. If you would use "", "empty" or "null" value for an attribute, it is impossible to identify, whether this product have this attribute with no value, or doesn't have this attribute at all. You can use the `mark for a non-linked attribute` to mark explicitly the attributes which should not be linked to a certain product. Per default "--" is used. Let's check the example.
 
-![Configurator attributes](_assets/import-feeds-example-unlink-attributes.png)
+![Configurator attributes](_assets/import-feeds/import-feeds-example-unlink-attributes.png)
 
 According to this example the product "all attributes 4" will not have the attributes "\_asset", "\_varchar" and "\_varchar DE" linked to it.
 
@@ -154,7 +154,7 @@ By importing “Boolean” fields or attributes "0" and "False" regardless case 
 ### "Multienum" fields and attributes
 You can import "multienum" values for fields and attributes by separating its values with help of `data record delimiter`. In our example we use "," symbol for it.
 
-![Configurator multienum](_assets/import-feeds-example-multienum.png).
+![Configurator multienum](_assets/import-feeds/import-feeds-example-multienum.png).
 
 Only predefined values can be accepted, if your "multienum" field or attribute have predefined options. If one of the "multienum" values, provided in the file to be imported, is not valid, the whole row will not be imported. If your "multienum" field or attribute have no predified options any value will be accepted.
 
@@ -171,13 +171,13 @@ Also, the default value consists of two parts. It is possible to save only curre
 ### Relations
 Each entity may have one-to-many, many-to-one or many-to-many relations to other entities. Import feeds module enables to import data with direct relations of all types. Data record from the related entity can be found and linked or new data record for the related entity can be created and linked. Each relation is available for configuration as a field. To create a mapping rule for a relation you need to set the "Type" of your mapping rule to "Field" and choose your relation’s name as a "Field". Let's configure a "Brand" relation. So, we choose "Brand" in the "Field" field and "Brand" in the "Column(s)" field. For a relation we also need to select the related entity fields, we choose ID, Name, Name in German, Active and Code.
 
-![Configurator relations](_assets/import-feeds-configurator-relations.png)
+![Configurator relations](_assets/import-feeds/import-feeds-configurator-relations.png)
 
 We also want the brand to be created if it is not found in our system. That is why we set the checkbox for the option "Create if not exists".
 
 The cell "Brand" in your CSV file should look as follows:
 
-![Configurator relations](_assets/import-feeds-example-relation.png)
+![Configurator relations](_assets/import-feeds/import-feeds-example-relation.png)
 
 All field values should be separated by the "Field delimiter for relation". Per default pipeline symbol "|" is set as a field delimiter for relation. 
 
@@ -194,7 +194,7 @@ If the new data record for the relation cannot be created, the system will gener
 ### Multiple Relations
 Multiple relations work like simple relations. The only difference is, that you can create multiple relations at once. Multiple data records for the related entities should be separated by using `data record delimiter`. For example, products are linked with categories via many-to-many relation, which means that some product can be assigned to different categories and some category may have many products assigned to it. For example, we can import product data together with categories as follows:
 
-![Configurator multiple_relations](_assets/import-feeds-example-multiple-relation.png)
+![Configurator multiple_relations](_assets/import-feeds/import-feeds-example-multiple-relation.png)
 
 Following related entity fields should be set in the mapping rule "Name", "Name in German", "Active" and "Code" for the data to be successfully imported.
 
@@ -207,7 +207,7 @@ If any of the multiple relations cannot be found and the data record cannot be c
 ### Related Assets, Asset Fields and Attributes
 Images, videos, and other types of files are assets. Asset can be configured for import the same way as a relation. If you want to import assets from provided URLs, you need to choose URL as related entity field. If you have images in multiple columns create a mapping rule for each column separately. If you use DAM module assets for your files will be created directly in DAM and will be linked with appropriate products.
 
-![Configurator assets](_assets/import-feeds-configurator-assets.png)
+![Configurator assets](_assets/import-feeds/import-feeds-configurator-assets.png)
 
 Configuration for the fields and attributes of type "Asset" is the same. Your files will be stored as assets in the DAM only if the DAM module is installed.
 
@@ -217,19 +217,19 @@ Import of assets via local server path is currently not supported.
 
 Click on `Import` button to import the data from the file, which you have uploaded during configuration of your import feed (which is a sample file). 
 
-![Run import option](_assets/import-feeds-buttons.png)
+![Run import option](_assets/import-feeds/import-feeds-buttons.png)
 
 Alternatively, you can import the data from a new file. Click on the `Upload & Import` button.
 
-![Run import option](_assets/import-feeds-upload-and-import.png)
+![Run import option](_assets/import-feeds/import-feeds-upload-and-import.png)
 
 In the pop-up that appears you can upload your new CSV file, which should be UTF-8 encoded and have the same structure as you sample file. Click on `Import` button to start the process.
 
-![Run import option](_assets/import-feeds-upload-and-import-popup.png)
+![Run import option](_assets/import-feeds/import-feeds-upload-and-import-popup.png)
 
 Started import job is added to the Queue Manager, where you can see the current status:
 
-![Queue manager](_assets/import-feeds-queue-manager.png)
+![Queue manager](_assets/import-feeds/import-feeds-queue-manager.png)
 
 The new record is also added to the "Import Results" Panel with the state `Pending`. After the import job is successfully completed the state will be automatically changed to `Done`.
 
@@ -241,15 +241,15 @@ Information about completed import jobs is displayed on the `Import results` pan
 Results of the data import can be viewed in two ways:
 - on the "Import Results" panel of the respective import feed, which shows the details on the import operations performed via the currently open import feed:
 
-![Queue manager](_assets/import-feeds-import-results.png)
+![Queue manager](_assets/import-feeds/import-feeds-import-results.png)
 
 - on the "Import Results List Page", which shows details on all import jobs performed in the system via import feeds. To open this page, click on the `Export Results` in your main navigation 
 
-![import-results-list](_assets/import-feeds-import-results-list.png)
+![import-results-list](_assets/import-feeds/import-feeds-import-results-list.png)
 
 or use the button `Show Full List` on your "Import Results Panel".
 
-![Queue manager](_assets/import-feeds-import-results-show-full-list.png)
+![Queue manager](_assets/import-feeds/import-feeds-import-results-show-full-list.png)
 
 
 
@@ -273,19 +273,19 @@ The following States are available:
 - **Failed** – for the import job that could not be performed due to some technical issues.
 
 You can use the data record action menu to view details of the respective import job or remove it.
-![data-record-action](_assets/import-feeds-import-results-menu.png)
+![data-record-action](_assets/import-feeds/import-feeds-import-results-menu.png)
 
 ### Import Result Details
 
 To view the import result record details, click on its name in the "Import Results" record.
 
-![Import result details](_assets/import-feeds-import-results-detail.png)
+![Import result details](_assets/import-feeds/import-feeds-import-results-detail.png)
 
 The error messages, if any, are displayed on the `ERRORS LOG` panel on this page. 
 
 To see a full list of error records, use the `Show Full List` action menu command. The errors will be displayed grouped by your current import job.
 
-![Import result logs](_assets/import-feeds-import-results-error-log.png)
+![Import result logs](_assets/import-feeds/import-feeds-import-results-error-log.png)
 
 ### Imported File
 
@@ -307,7 +307,7 @@ After import job is done you can download the error file, correct your data in a
 
 To *duplicate* the existing import feed record, use the corresponding option from the actions menu on the detail view page of the desired import feed record:
 
-![Duplicate feed](_assets/import-feeds-duplicate.png)
+![Duplicate feed](_assets/import-feeds/import-feeds-duplicate.png)
 
 You will be redirected to the import feed creation page and get all the values of the last chosen import feed record copied in the empty fields of the new feed record to be created. After save the mapping rules from the configurator will be copied too.
 
