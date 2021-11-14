@@ -312,4 +312,3 @@ To *duplicate* the existing import feed record, use the corresponding option fro
 You will be redirected to the import feed creation page and get all the values of the last chosen import feed record copied in the empty fields of the new feed record to be created. After save the mapping rules from the configurator will be copied too.
 
 To *remove* the import feed record, use the corresponding option from the action’s menu of your import feed.
-

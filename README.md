@@ -72,6 +72,7 @@
       - [Completeness](/modules/completeness.md)
       - [Discussions](/modules/discussions.md)
       - [Export Feeds](/modules/export-feeds.md)
+      - [Import Feeds](/modules/import-feeds.md)
 
 **This work is licensed under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)**.
 

@@ -5,3 +5,4 @@
 - [Completeness](./completeness.md)
 - [Discussions](./discussions.md)
 - [Export Feeds](./export-feeds.md)
+- [Import Feeds](./import-feeds.md)

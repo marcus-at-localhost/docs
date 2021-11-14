@@ -13,3 +13,4 @@
    - [Completeness](/modules/completeness.md)
    - [Discussions](/modules/discussions.md)
    - [Export Feeds](/modules/export-feeds.md)
+   - [Import Feeds](/modules/import-feeds.md)
