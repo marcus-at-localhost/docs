@@ -21,12 +21,12 @@ You will be able to create a scheduled job for your import tasks only if the app
 
 ## Administrator Functions
 
-After the module installation two new entities will be created in your system - `Import Feeds` and `Import Results`. Via `Administration > System > User Interface` you can add these items to the navigation of your system if it did not happen automatically.
+After the module installation two new entities will be created in your system - `Import Feeds` and `Import Jobs`. Via `Administration > System > User Interface` you can add these items to the navigation of your system if it did not happen automatically.
 ![Import feeds adding](_assets/import-feeds/import-feeds-admin-layout-manager.png)
 
 ### Access Rights
 
-To enable import feed creation, editing, usage and deletion by other users, configure the corresponding access rights to the `Import feeds` and `Import results` entities for the desired user/team/portal user role on the `Administration > Roles > *Role name*` page: 
+To enable import feed creation, editing, usage and deletion by other users, configure the corresponding access rights to the `Import feeds` and `Import Jobs` entities for the desired user/team/portal user role on the `Administration > Roles > *Role name*` page: 
 
 ![Import role cfg](_assets/import-feeds/import-feeds-admin-roles.png)
 
@@ -231,39 +231,39 @@ Started import job is added to the Queue Manager, where you can see the current 
 
 ![Queue manager](_assets/import-feeds/import-feeds-queue-manager.png)
 
-The new record is also added to the "Import Results" Panel with the state `Pending`. After the import job is successfully completed the state will be automatically changed to `Done`.
+The new record is also added to the "Import Jobs" Panel with the state `Pending`. After the import job is successfully completed the state will be automatically changed to `Done`.
 
 
-## Import Results
+## Import Jobs
 
-Information about completed import jobs is displayed on the `Import results` panel, which is empty on the import feed [creation](#import-feed-creation) step but gets filled in after the data import is performed via the given import feed.
+Information about completed import jobs is displayed on the `Import Jobs` panel, which is empty on the import feed [creation](#import-feed-creation) step but gets filled in after the data import is performed via the given import feed.
 
 Results of the data import can be viewed in two ways:
-- on the "Import Results" panel of the respective import feed, which shows the details on the import operations performed via the currently open import feed:
+- on the "Import Jobs" panel of the respective import feed, which shows the details on the import operations performed via the currently open import feed:
 
 ![Queue manager](_assets/import-feeds/import-feeds-import-results.png)
 
-- on the "Import Results List Page", which shows details on all import jobs performed in the system via import feeds. To open this page, click on the `Export Results` in your main navigation 
+- on the "Import Jobs List Page", which shows details on all import jobs performed in the system via import feeds. To open this page, click on the `Export Results` in your main navigation 
 
 ![import-results-list](_assets/import-feeds/import-feeds-import-results-list.png)
 
-or use the button `Show Full List` on your "Import Results Panel".
+or use the button `Show Full List` on your "Import Jobs Panel".
 
 ![Queue manager](_assets/import-feeds/import-feeds-import-results-show-full-list.png)
 
 
 
-The import results details contain the following information:
+The Import Jobs details contain the following information:
 
-- **Name** – the import result record name, which is generated automatically based on the date and time of the import job start. Click the import result record name to open its detail view page.
+- **Name** – the Import Job record name, which is generated automatically based on the date and time of the import job start. Click the Import Job record name to open its detail view page.
 - **Import feed** – the name of the import feed used for the import job. Click on the import feed record name to open its detail page.
 - **Imported file** – the name of the data file (CSV) used for the import operation. Click the imported file name to download it. 
 - **State** – the current status of the import operation.
 - **Start** – the date and time of the import job start.
 - **End** – the date and time of the import job end.
-- **Created** – the number of records created as a result of the performed import job. Click on this value to open the list view page of the corresponding entity records filtered by the given import result, i.e. with the `Created by import` filter applied.
-- **Updated** – the number of records updated as a result of the performed import job. Click on this value for the desired import result to open the list view page of the corresponding entity records filtered by the given import result, i.e. with the `Updated by import` filter applied.
-- **Errors** – the number of errors, if any, that occurred during the import job. Click on this value for the desired import result to open the list view page of the import result log records, where you can see the details on all errors.
+- **Created** – the number of records created as a result of the performed import job. Click on this value to open the list view page of the corresponding entity records filtered by the given Import Job, i.e. with the `Created by import` filter applied.
+- **Updated** – the number of records updated as a result of the performed import job. Click on this value for the desired Import Job to open the list view page of the corresponding entity records filtered by the given Import Job, i.e. with the `Updated by import` filter applied.
+- **Errors** – the number of errors, if any, that occurred during the import job. Click on this value for the desired Import Job to open the list view page of the Import Job log records, where you can see the details on all errors.
 - **[Error file](#error-file)** – the name of the CSV file that contains only rows with errors, which were not imported. The error file name is generated automatically based on the imported file name. Click on the error file name to download it.
 
 The following States are available:
@@ -275,21 +275,21 @@ The following States are available:
 You can use the data record action menu to view details of the respective import job or remove it.
 ![data-record-action](_assets/import-feeds/import-feeds-import-results-menu.png)
 
-### Import Result Details
+### Import Job Details
 
-To view the import result record details, click on its name in the "Import Results" record.
+To view the Import Job record details, click on its name in the "Import Jobs" record.
 
-![Import result details](_assets/import-feeds/import-feeds-import-results-detail.png)
+![Import Job details](_assets/import-feeds/import-feeds-import-results-detail.png)
 
 The error messages, if any, are displayed on the `ERRORS LOG` panel on this page. 
 
 To see a full list of error records, use the `Show Full List` action menu command. The errors will be displayed grouped by your current import job.
 
-![Import result logs](_assets/import-feeds/import-feeds-import-results-error-log.png)
+![Import Job logs](_assets/import-feeds/import-feeds-import-results-error-log.png)
 
 ### Imported File
 
-Imported file can be downloaded, eg to check what exactly was imported, if you click on the file name in your import results record.
+Imported file can be downloaded, eg to check what exactly was imported, if you click on the file name in your Import Jobs record.
 
 ### Error File
 
