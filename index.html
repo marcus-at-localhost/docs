@@ -47,15 +47,6 @@
   }
 </style>
 <div id="google_translate_element"></div>  
-<script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'en'},
-            'google_translate_element'
-        );
-    }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <div id="app"></div>
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
@@ -123,6 +114,7 @@
 
     }
   </script>
+  
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   <!--<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>-->
@@ -135,5 +127,16 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/matomo.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+
+  <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
