@@ -12,10 +12,10 @@ You will be able to create a scheduled job for your import tasks only if the app
 ## The following modules extend the functionality of the import feeds
 
 - Import Feeds: Rollback – allows to roll back the last import with the full data recovery
-- Import Feeds: Databases – allows to import data from MSSQL, MySQL, PostgreSQL, Oracle, HANA databases
-- Import Feeds: JSON and XML – allows to import data from JSON and XML files
-- Import Feeds: URL – allows to import data via URL from CSV, JSON and XML files
-- Import Feeds: REST API – allows to import data via REST API
+- Import Feeds: Database – allows to import data from MSSQL, MySQL, PostgreSQL, Oracle, HANA databases
+- Import Feeds: FTP – allows to import data from CSV, JSON and XML files via FTP Server, also with authorisation
+- Import Feeds: URL – allows to import data from CSV, JSON and XML files via provided URL 
+- Import Feeds: HTTP Request – allows to import data via HTTP Request, eg via REST API
 - Connector – orchestrates multiple import and export feeds to automate the complex data exchange
 
 
