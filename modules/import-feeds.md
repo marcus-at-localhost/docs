@@ -211,6 +211,12 @@ Images, videos, and other types of files are assets. Asset can be configured for
 
 Configuration for the fields and attributes of type "Asset" is the same. Your files will be stored as assets in the DAM only if the DAM module is installed.
 
+#### Setting Main Image for Products
+If you are importing the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". 
+
+> Please note if you want to import other assets together with the Main Image, create an import rule for the assets, and make sure your Main Image URL is also provided there. In other case it is possible, that the rule for the Main Image will create it, and the rule for assets will remove the relation with the Main Image, because it is not mentioned there.
+
+
 Import of assets via local server path is currently not supported.
 
 ## Running Import Feed
