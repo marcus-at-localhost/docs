@@ -60,9 +60,14 @@ The following settings are available here:
 - **Description** – description of the import feed usage, can be used as a reminder for the future or as a hint for other users of the given import feed
 - **Type** – the import feed type, cannot be modified later
 - **Action** – define the action to be performed in the system during the data import:
-    - *Create Only* – only new data records will be created, existing data records will not be updated
-    - *Update Only* – existing records will be updated, new data records will not be created
-    - *Create & Update* – new data records will be created, and the existing records will be updated.
+    - *Create Only* – only new data records will be created, existing data records will not be updated (even if some data is changed)
+    - *Update Only* – existing records will be updated, new data records will not be created (even if the import data have some new records)
+    - *Delete Only* – existing records will be deleted, if records with the defined identifier does not come with the import data
+    - *Create and Update* – new data records will be created, and the existing records will be updated
+    - *Create and Delete* – new data records are created, and no the records no longer provided in the import data will be deleted
+    - *Update and Delete* – existing records will be updated and records with no longer provided IDs will be deleted
+    - *Create, Update and Delete* – full synchronization will be done.
+
 
 ### File Settings
 
