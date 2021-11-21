@@ -14,3 +14,4 @@
    - [Discussions](/modules/discussions.md)
    - [Export Feeds](/modules/export-feeds.md)
    - [Import Feeds](/modules/import-feeds.md)
+   - [Ownership Inheritance](/modules/ownership-inheritance.md)
