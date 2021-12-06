@@ -7,3 +7,4 @@
     - [Discussions](./discussions.md)
     - [Export Feeds](./export-feeds.md)
     - [Import Feeds](./import-feeds.md)
+    - [PDF Generator](./pdf-generator.md)
