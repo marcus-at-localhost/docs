@@ -1,6 +1,7 @@
 # Installation Guide
 
-> Installation guide is based on **Ubuntu**. Of course, you can use any unix-based system, but make sure that your OS supports the following commands.<br/>
+This Installation Guide is prepared for **Ubuntu** Operating System. Of course, you can use any unix-based system, but in this case you need to adopt this manual by youself.
+Before your start make sure your have a **dedicated (virtual) server with root permission**. On a usual hosting the system will not work!
 
 ## 1. Linux Server Preparation
 This section will describe how to prepare server for an installation of AtroCore Application.
