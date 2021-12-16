@@ -308,7 +308,7 @@ https://demo.atropim.com/
 
 ### Installation
 
-Die Installationsanleitung ist [hier](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/installation.md) verfügbar.
+Die Installationsanleitung ist [hier](/atrocore/docs/blob/master/atrocore/admin-guide/installation.md) verfügbar.
 
 ## Lizenz
 

@@ -259,4 +259,4 @@ If you see this page, it means your Nginx server block is working as expected.
 
 
 ## 6. Install AtroCore Application
-Now your server is prepared for the installation of the AtroCore Application. [Go to](https://github.com/atrocore/atrocore-docs/blob/master/en/administration/installation.md#2-install-atrocore-atropim-atrodam-etc-application) install guide. 
+Now your server is prepared for the installation of the AtroCore Application. [Go to](https://github.com/atrocore/docs/blob/master/atrocore/admin-guide/installation.md) install guide. 

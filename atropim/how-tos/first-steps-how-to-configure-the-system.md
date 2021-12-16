@@ -10,7 +10,7 @@ In this article we assume the requirements of an average user who needs all enti
 
 A product attribute determines a certain property of a product. Thanks to the typing of the attributes, their values are also typed. The product attributes are not only used to describe the product in full, but also for the filters to help the end customer to find the required product more quickly. This is precisely why the product description with the attributes is very important. Typical attributes for clothing are, for example, size and color.
 
-AtroPIM has 14 attribute types. The use of attribute types is necessary for better typing and corresponding validation of the data in the system. For more information on attributes and their types, please read the [documentation](https://github.com/atrocore/atropim-docs/blob/master/en/user-guide/attributes.md).
+AtroPIM has 14 attribute types. The use of attribute types is necessary for better typing and corresponding validation of the data in the system. For more information on attributes and their types, please read the [documentation](/atrocore/docs/blob/master/atropim/user-guide/attributes.md).
 
 For more information on configuring the product attributes, read the article:  [“How to create the product attributes?”](./how-to-create-the-product-attributes.md).
 
