@@ -12,7 +12,7 @@ For the fields of the `Text`, `Varchar`, and `Wysiwyg` types, the additional inp
 
 ### Multilingual Attributes
 
-In addition to operating with multilingual fields, installing TreoPIM to your system will allow you to make [attributes](https://treopim.com/help/attributes) of the `Boolean`, `Enum`, `Multi-Enum`, `Text`, `Varchar`, and `Wysiwyg` type multilingual – there is the `Multi-Language` checkbox on their detail view pages:
+In addition to operating with multilingual fields, installing TreoPIM to your system will allow you to make [attributes](../../atropim/user-guide/attributes.md) of the `Boolean`, `Enum`, `Multi-Enum`, `Text`, `Varchar`, and `Wysiwyg` type multilingual – there is the `Multi-Language` checkbox on their detail view pages:
 
 ![ML attribute](../_assets/user-guide/multilingualism/ml-attribute.jpg)
 
@@ -20,7 +20,7 @@ To create a multilingual attribute, select the `Multi-Language` checkbox and fil
 
 ![ML boolean](../_assets/user-guide/multilingualism/ml-boolean.jpg)
 
-When a multilingual attribute is linked to a [product](https://treopim.com/help/products#product-attributes) record, the value of its main locale is displayed on the `PRODUCT ATTRIBUTES` panel within the product detail view page:
+When a multilingual attribute is linked to a [product](../../atropim/user-guide/products.md#product-attributes) record, the value of its main locale is displayed on the `PRODUCT ATTRIBUTES` panel within the product detail view page:
 
 ![Product attribute ML](../_assets/user-guide/multilingualism/product-attribute-ml.jpg)
 
@@ -32,7 +32,7 @@ Alternatively, use the `View` option from its single record actions menu and cli
 
 ### Multilingual Fields and Attributes Filtering
 
-If [TreoPIM](https://treopim.com/help/what-is-treopim) is installed to your system, additional options are added to the `locales` filtering menu on the [product](https://treopim.com/help/search-and-filtering) detail view page:
+If AtroPIM is installed to your system, additional options are added to the `locales` filtering menu on the [product](./search-and-filtering.md) detail view page:
 
 ![Locale filter](../_assets/user-guide/multilingualism/locale-filter.jpg)
 

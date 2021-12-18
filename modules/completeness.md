@@ -6,7 +6,7 @@ Thanks to the [graphical representation](#completeness-dashlets), you have full 
 
 ## Administrator Functions
 
-The "Completeness" module was created primarily to be used together with the [AtroPIM](https://atropim.com/help/what-is-atropim) system, so further description of the module is given in the context of AtroPIM.
+The "Completeness" module was created primarily to be used together with the AtroPIM system, so further description of the module is given in the context of AtroPIM.
 
 ### Module Activation 
 
@@ -34,13 +34,13 @@ In such a way, you can mark as required as many entity fields as you need. As a 
 
 ### Marking Product Attributes as Required 
 
-For the `Product` entity, completeness is calculated not only on the basis of the required fields, but also on the basis of the required attributes. You can define product *attributes* as required, both of the `Global` and `Channel` scope. This is performed on the [product family](https://atropim.com/help/product-families) detail view page:
+For the `Product` entity, completeness is calculated not only on the basis of the required fields, but also on the basis of the required attributes. You can define product *attributes* as required, both of the `Global` and `Channel` scope. This is performed on the [Product Family](../atropim/user-guide/product-families.md) detail view page:
 
 ![Required attributes](_assets/completeness/required-attributes.jpg)
 
 Linking `Channel` attributes to the product records allows you to have *channel completeness* [calculated](#completeness-calculation-logic) separately for each channel linked to the given product record. However, if there are no required attributes linked to the given channel record, the completeness is calculated only on the basis of its required fields.
 
-Refer to the **AtroPIM user guide** to learn more about the [attributes](https://atropim.com/help/attributes), [channels](https://atropim.com/help/channels), and [product families](https://atropim.com/help/product-families).
+Refer to the **AtroPIM user guide** to learn more about the [Attributes](../atropim/user-guide/attributes.md), [Channels](../atropim/user-guide/channels.md), and [Product Families](../atropim/user-guide/product-families.md).
 
 ### Completeness Value Display Configuration
 
@@ -75,7 +75,7 @@ Having the "Completeness" module installed and properly configured ensures the e
 
 - **Completeness** – the completeness level of the required fields and required product attributes. The required multilingual fields are not included here, only the main field values.
 
-Moreover, two additional completeness types are also calculated for [product](https://atropim.com/help/products) records:
+Moreover, two additional completeness types are also calculated for [Product](../atropim/user-guide/products.md) records:
 
 - **Global completeness** – the completeness level of the required fields, including their languages. For product records, the total global calculation also includes the required `Global` attributes and their languages.
   
@@ -95,7 +95,7 @@ Moreover, user can influence the completeness statistics by editing the required
 
 ### Completeness Dashlets
 
-In order to conveniently track the completeness of product information in the system, user can display special [dashlets](https://atropim.com/help/dashboards-and-dashlets#dashlets) on his custom dashboard:
+In order to conveniently track the completeness of product information in the system, user can display special [dashlets](../atropim/user-guide/dashboards-and-dashlets.md#dashlets) on his custom dashboard:
 
 ![Completeness Dashlets](_assets/completeness/completeness-dashlets.jpg)
 

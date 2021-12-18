@@ -73,7 +73,7 @@ Please, note if the main multilingual field is mandatory, so are its all locale 
 
 ![ML fields required](../_assets/administration/multilingualism/ml-fields-required.jpg)
 
-Moreover, input of values in the given multilingual fields is also required for all languages activated in the TreoCore system. Learn more about TreoCore and its advantages [here](https://treopim.com/help/what-is-treocore).
+Moreover, input of values in the given multilingual fields is also required for all languages activated in the AtroCore system.
 
 The	`DYNAMIC LOGIC` panel settings are not inherited – it is configured separately for each multilingual field:
 
@@ -95,13 +95,13 @@ To customize the fields display for other layout types of the entity, make simil
 
 #### Search Filters
 
-In the same way, multilingual fields can also be added to the [search filters](https://treopim.com/help/search-and-filtering) list in the Layout Manager:
+In the same way, multilingual fields can also be added to the [search filters](./search-and-filtering.md) list in the Layout Manager:
 
 ![Search filters](../_assets/administration/multilingualism/search-filters.jpg)
 
 #### Mass Update
 
-To activate the [mass update](https://treopim.com/help/views-and-panels#mass-actions) of the entity records by multilingual fields, click `Mass Update` and drag-and-drop the desired fields one by one to the `Enabled` column:
+To activate the [mass update](./views-and-panels.md#mass-actions) of the entity records by multilingual fields, click `Mass Update` and drag-and-drop the desired fields one by one to the `Enabled` column:
 
 ![Mass update](../_assets/administration/multilingualism/mass-update.jpg)
 

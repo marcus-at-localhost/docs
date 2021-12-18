@@ -4,11 +4,9 @@ The "Pricing" module enables to operate with different prices for different cust
 
 ## Administrator Functions  
 
-The "Pricing" module significantly extends the pricing functionality of the [AtroPIM](../atropim/user-guide/what-is-atropim.md) PIM System.
+The "Pricing" module significantly extends the pricing functionality of the AtroPIM PIM System.
 
-After the module installation, a new entity `Price Profile` is added to the [navigation menu](https://atropim.com/help/user-interface#navigation-menu) and the `PRODUCT PRICES` panel is added to the [products](https://atropim.com/help/products) detail view page instead of the `Price` field.
-
-
+After the module installation, a new entity `Price Profile` is added to the [Navigation Menu](../atropim/user-guide/user-interface.md#navigation-menu) and the `PRODUCT PRICES` panel is added to the [Products](../atropim/user-guide/products.md) detail view page instead of the `Price` field.
 
 ### Currency Configuration
 
@@ -46,7 +44,7 @@ A price profile is a configurable price variation that allows you to define vari
 
 ### Creating
 
-To create a new price profile record, click `Price Profiles` in the navigation menu to get to the profiles [list view](https://atropim.com/help/views-and-panels#list-view), and then click the `Create Price Profile` button. The common creation window will open:
+To create a new price profile record, click `Price Profiles` in the navigation menu to get to the profiles [list view](../atropim/user-guide/views-and-panels.md#list-view), and then click the `Create Price Profile` button. The common creation window will open:
 
 ![Profile creation](./_assets/pricing/profile-create.jpg)
 
@@ -62,15 +60,15 @@ Click the `Save` button to finish the price profile creation and move to its [co
 
 ### Configuring
 
-The price profile [detail view](https://atropim.com/help/views-and-panels#detail-view) page opens when the price profile is saved:
+The price profile [detail view](../atropim/user-guide/views-and-panels.md#detail-view) page opens when the price profile is saved:
 
 ![Price profile details](./_assets/pricing/price-profile-details.jpg)
 
-Here, on the `CHANNELS` panel, relations between [channels](https://atropim.com/help/channels), through which product distribution is performed, and price profiles are established and managed via selecting the existing ones or creating new channels:
+Here, on the `CHANNELS` panel, relations between [channels](../atropim/user-guide/channels.md), through which product distribution is performed, and price profiles are established and managed via selecting the existing ones or creating new channels:
 
 ![Channels panel](./_assets/pricing/channels-panel.jpg)
 
-Read more about these options in the corresponding [article](https://atropim.com/help/products#channels) of the AtroPIM user guide. 
+Read more about these options in the corresponding [article](../atropim/user-guide/products.md#channels) of the AtroPIM user guide. 
 
 Alternatively, you can link price profiles with channels on the `PRICE PROFILES` panel within the desired channel detail view page:
 
@@ -110,7 +108,7 @@ Please, note that only first three prices are shown on the panel. To see them al
 
 ![View product price](./_assets/pricing/product-price-view.jpg)
 
-If you need to [duplicate](https://atropim.com/help/products#duplicating) the product record, in which the price values are configured, you can choose whether the prices are to be duplicated as well in the confirmation pop-up that appears:
+If you need to duplicate the [product record](../atropim/user-guide/products.md#duplicating), in which the price values are configured, you can choose whether the prices are to be duplicated as well in the confirmation pop-up that appears:
 
 ![Duplicate product prices](./_assets/pricing/product-duplicate-prices.jpg)
  

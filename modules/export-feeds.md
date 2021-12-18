@@ -1,12 +1,12 @@
 # Export Feeds
 
-The "Export Feeds" module enables the use of export feeds in a user-friendly manner. In general, *export feed* is a data export template that depends on the user needs and entity data to be exported from the AtroPIM system. Learn more about the AtroPIM system and its advantages [here](https://atropim.com/help/what-is-atropim).
+The "Export Feeds" module enables the use of export feeds in a user-friendly manner. In general, *export feed* is a data export template that depends on the user needs and entity data to be exported from the AtroPIM system.
 
 With the help of the "Export Feeds" module, data export from the AtroPIM system is performed in accordance with the export templates that can be further configured and customized, as well as reused at different time intervals.
 
 ## Administrator Functions
 
-The "Export Feeds" module significantly extends the functionality of the [AtroPIM](https://atropim.com/help/what-is-atropim) system, so further description of the module is given in the context of AtroPIM.
+The "Export Feeds" module significantly extends the functionality of the AtroPIM system, so further description of the module is given in the context of AtroPIM.
 
 After the module installation, a new `Export Feeds` configuration group is added to the AtroPIM administration page. Also there is a possibility to add export feeds as a separate navigation menu item on the `Administration > User Interface` page:
 
@@ -23,7 +23,7 @@ To create a new export feed, go to the `Administration > Export Feeds` page or c
 ![Export feed creating](_assets/export-feeds/export-feed-create.jpg)
 
 Here enter the export feed name, select its type and define its owner. Currently the following export feed types are supported:
- - **Simple** – designed for exporting data from any entity existing in your system with the ability to configure the list of fields to be exported, their order and names. Also this export feed type allows you to export product attribute values and product categories for the product entities in accordance with their scope levels. Refer to the **AtroPIM user guide** to learn more about the [attributes](https://atropim.com/help/attributes) and [products](https://atropim.com/help/products).
+ - **Simple** – designed for exporting data from any entity existing in your system with the ability to configure the list of fields to be exported, their order and names. Also this export feed type allows you to export product attribute values and product categories for the product entities in accordance with their scope levels. Refer to the **AtroPIM User Guide** to learn more about the [Attributes](../atropim/user-guide/attributes.md) and [Products](../atropim/user-guide/products.md).
 - **Product image** – designed for exporting product images existing in your system. The resulting file will contain the URL links to the exported product images arranged in accordance with the scope level (global or channel) defined for product images in the system.
 
 Click the `Save` button to complete the operation; the new record will be added to the export feeds list. You can configure it right away on the detail view page that opens or return to it later.
@@ -36,7 +36,7 @@ To configure the export feed, click the desired record in the export feeds list;
 
 In-line editing is supported here. So prior to making any changes, you have to click the pencil icon located on the right of each editable field.
 
-*For details on in-line editing and other features of the AtroPIM system, refer to the **Entity Records** section of the [**Views and Panels**](https://atropim.com/help/views-and-panels) article of our user guide.*
+*For details on in-line editing and other features of the AtroPIM system, refer to the **Entity Records** section of the [**Views and Panels**](../atropim/user-guide/views-and-panels.md) article of our user guide.*
 
 The following settings are available on the `OVERVIEW` panel:
 
@@ -86,7 +86,7 @@ To enable editing of the parameters on the `SIMPLE TYPE SETTINGS` panel, click t
 
 #### Configurator
 
-The configuration of the entity fields is performed on the `CONFIGURATOR` panel on either the detail or edit view page of the export feed. By default, the required fields of the entity type defined on the `SIMPLE TYPE SETTINGS` panel are displayed there, and depending on this choice, the `CONFIGURATOR` panel contains different fields. For [products](https://atropim.com/help/products), this panel looks as follows: 
+The configuration of the entity fields is performed on the `CONFIGURATOR` panel on either the detail or edit view page of the export feed. By default, the required fields of the entity type defined on the `SIMPLE TYPE SETTINGS` panel are displayed there, and depending on this choice, the `CONFIGURATOR` panel contains different fields. For [Products](../atropim/user-guide/products.md), this panel looks as follows: 
 
 ![Configurator panel](_assets/export-feeds/configurator.jpg)
 
