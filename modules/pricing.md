@@ -4,7 +4,7 @@ The "Pricing" module enables to operate with different prices for different cust
 
 ## Administrator Functions  
 
-The "Pricing" module significantly extends the pricing functionality of the [AtroPIM](/atrocore/docs/blob/master/atropim/user-guide/what-is-atropim.md) PIM System.
+The "Pricing" module significantly extends the pricing functionality of the [AtroPIM](../atropim/user-guide/what-is-atropim.md) PIM System.
 
 After the module installation, a new entity `Price Profile` is added to the [navigation menu](https://atropim.com/help/user-interface#navigation-menu) and the `PRODUCT PRICES` panel is added to the [products](https://atropim.com/help/products) detail view page instead of the `Price` field.
 
