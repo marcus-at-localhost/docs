@@ -1,6 +1,6 @@
 # Pricing 
 
-The "Pricing" module enables to operate with different prices for different customer groups and channels. In addition, you can take usage of scale pricing capabilities and automatic price conversion to different currencies. The module still enables you to set the price in each currency for any amount manually.
+The "Pricing" module enables to operate with different prices for different customer groups and channels. In addition, you can take usage of scale pricing capabilities and automatic price conversion to different currencies. The module enables you to set the price in each currency for any amount manually.
 
 ## Administrator Functions  
 
