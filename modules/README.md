@@ -6,3 +6,5 @@
 - [Discussions](./discussions.md)
 - [Export Feeds](./export-feeds.md)
 - [Import Feeds](./import-feeds.md)
+- [Ownership Inheritance](./ownership-inheritance.md)
+- [PDF Generator](./pdf-generator.md)
