@@ -12,7 +12,7 @@ For the fields of the `Text`, `Varchar`, and `Wysiwyg` types, the additional inp
 
 ### Multilingual Attributes
 
-In addition to operating with multilingual fields, installing TreoPIM to your system will allow you to make [attributes](../../atropim/user-guide/attributes.md) of the `Boolean`, `Enum`, `Multi-Enum`, `Text`, `Varchar`, and `Wysiwyg` type multilingual – there is the `Multi-Language` checkbox on their detail view pages:
+In addition to operating with multilingual fields, installing AtroPIM on your system will allow you to make [attributes](../../atropim/user-guide/attributes.md) of the `Boolean`, `Enum`, `Multi-Enum`, `Text`, `Varchar`, and `Wysiwyg` type multilingual – there is the `Multi-Language` checkbox on their detail view pages:
 
 ![ML attribute](../_assets/user-guide/multilingualism/ml-attribute.jpg)
 
