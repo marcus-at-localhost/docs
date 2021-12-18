@@ -60,7 +60,7 @@ or by editing the product:
 
 ![](../_assets/how-tos/product-description-in-6-steps/image45.png)
 
-For more information about attributes, please read the documentation [“Attribute”](/atrocore/docs/blob/master/atropim/user-guide/attributes.md).
+For more information about attributes, please read the documentation [“Attribute”](../user-guide/attributes.md).
 
 ## Step 4: add pictures and other assets
 

@@ -20,7 +20,7 @@ Es kommt vor, dass man Attribute mit gleichen Namen für verschiedenartige Produ
 
 ![](../../atropim/_assets/how-tos/how-to-create-the-product-attributes/image7.png)
 
-Für nähere Informationen zu Attributen und ihren Typen lesen Sie die Dokumentation \[“Produktattribute”\] (/atrocore/docs/blob/master/atropim/user-guide/attributes.md).
+Für nähere Informationen zu Attributen und ihren Typen lesen Sie die Dokumentation \[“Produktattribute”\] (../user-guide/attributes.md).
 
 ## Produktattributgruppen 
 
@@ -32,7 +32,7 @@ Die Nutzung von Produktattributgruppen ist nicht obligatorisch. Ein Attribut kan
 
 ![](../../atropim/_assets/how-tos/how-to-create-the-product-attributes/image25.png)
 
-Für nähere Informationen zu Attributen und ihren Typen lesen Sie die Dokumentation \[“Attributgruppen”\] (/atrocore/docs/blob/master/atropim/user-guide/attribute-groups.md).
+Für nähere Informationen zu Attributen und ihren Typen lesen Sie die Dokumentation \[“Attributgruppen”\] (../user-guide/attribute-groups.md).
 
 ## Konfiguration der Attribute für Produktfamilien
 

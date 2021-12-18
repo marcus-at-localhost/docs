@@ -241,4 +241,4 @@ If you see this page, it means your Apache virtual host is working as expected.
 
 
 ## 6. Install AtroCore Application
-Now your server is prepared for the installation of the AtroCore Application. [Go to](https://github.com/atrocore/docs/blob/master/atrocore/admin-guide/installation.md) install guide. 
+Now your server is prepared for the installation of the AtroCore Application. [Go to](./installation.md) install guide. 

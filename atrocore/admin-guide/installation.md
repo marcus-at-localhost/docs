@@ -5,8 +5,8 @@ Before your start make sure your have a **dedicated (virtual) server with root p
 
 ## 1. Linux Server Preparation
 This section will describe how to prepare server for an installation of AtroCore Application.
-* [Apache web server preparation](https://github.com/atrocore/docs/blob/master/atrocore/admin-guide/web-server-preparation-apache.md) (RECOMMENDED)
-* [Nginx web server preparation](https://github.com/atrocore/docs/blob/master/atrocore/admin-guide/web-server-preparation-nginx.md)
+* [Apache web server preparation](./web-server-preparation-apache.md) (RECOMMENDED)
+* [Nginx web server preparation](./web-server-preparation-nginx.md)
 
 ## 2. Install AtroCore (AtroPIM, AtroDAM, etc) Application
 This section describes how to install AtroCore Application on the prepared web server.

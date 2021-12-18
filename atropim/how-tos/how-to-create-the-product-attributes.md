@@ -20,7 +20,7 @@ It happens that you have to use attributes with the same name for different prod
 
 ![](../_assets/how-tos/how-to-create-the-product-attributes/image7.png)
 
-For more information on attributes and their types, read the documentation [“Product Attributes”](/atrocore/docs/blob/master/atropim/user-guide/attributes.md).
+For more information on attributes and their types, read the documentation [“Product Attributes”](../user-guide/attributes.md).
 
 ## Product attribute groups 
 
@@ -32,7 +32,7 @@ The use of product attribute groups is not mandatory. An attribute can only be a
 
 ![](../_assets/how-tos/how-to-create-the-product-attributes/image25.png)
 
-For more information on attributes and their types, read the documentation [“Attribute Groups”](/atrocore/docs/blob/master/atropim/user-guide/attribute-groups.md).
+For more information on attributes and their types, read the documentation [“Attribute Groups”](../user-guide/attribute-groups.md).
 
 ## Configuration of the attributes for product families
 
