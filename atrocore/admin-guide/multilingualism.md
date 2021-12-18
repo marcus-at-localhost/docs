@@ -28,7 +28,7 @@ Once the action is applied, the missing locale fields are added at the bottom of
 
 ### Multilingual Field Creation 
 
-Currently the following field types can be made multilingual in the TreoPIM system:
+Currently the following field types can be made multilingual in the AtroPIM system:
 
 | **Field Type** | **Description**                                           |
 |----------------|-----------------------------------------------------------|
