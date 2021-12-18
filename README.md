@@ -75,6 +75,7 @@
       - [Import Feeds](/modules/import-feeds.md)
       - [Ownership Inheritance](/modules/ownership-inheritance.md)
       - [PDF Generator](/modules/pdf-generator.md)
+      - [Pricing](/modules/pricing.md)
 
 **This work is licensed under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)**.
 
