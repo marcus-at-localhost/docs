@@ -16,3 +16,4 @@
    - [Import Feeds](/modules/import-feeds.md)
    - [Ownership Inheritance](/modules/ownership-inheritance.md)
    - [PDF Generator](/modules/pdf-generator.md)
+   - [Pricing](/modules/pricing.md)
