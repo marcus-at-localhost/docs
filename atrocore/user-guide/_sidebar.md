@@ -7,5 +7,6 @@
    - [Search and Filtering](search-and-filtering.md)
    - [Stream](stream.md)
    - [Multilingualism](multilingualism.md)
+   - [Measure Unit Conversion](measure-unit-conversion.md)
 - [Developer Guide](../developer-guide/)
 

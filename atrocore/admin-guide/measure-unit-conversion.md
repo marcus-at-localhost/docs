@@ -1,54 +1,77 @@
 # Measure Unit Conversion
 
+## Creating Measures and Units
 
-1) Default value for unit fields and attributes should be configurable (issue is opened: https://my.atrocore.com/#Issue/view/618b9c15bf30985da)
+AtroCore enables you to manage different Measures (e.g length or weight) and Measure Units (e.g. cm, mm, dm, m) as well as supports the automatic measure unit conversion. 
 
-1a) Default unit for the field or attribute can be chosen only from units available for the default system locale.
+To manage this data go to `Administration > Measures`. Here you see the list of Measures, which are currently available in your system.
 
-2) New Entity "Locale" is to be added.
+![measure-list](../_assets/admin-guide/measure-unit-conversion/measure-list.png)
 
-3) Locale Settings (for system and each user) will be moved to Locale Entity. Multiple records can be created here. 
+To create a new Measure, click on the button `Create Measure`. Popup windows opens, here you can set the name for your new measure and save the record.
 
-4) For the system you must set the locale (one should always be preconfigured and will have the Name "Default Locale"). The locale, which is selected for the system or some user, cannot be removed. For the system locale is a mandatory field.
+![measure-create](../_assets/admin-guide/measure-unit-conversion/measure-create.png)
 
-4a) You can set different locales for different users (=one locale per user, so you need to configure a locale only once, not for each user separately).
+> Measure is used for the fields and product attributes of type "unit". You can define multiple Measures with the same nature, if you plan to use different Units for different attributes or fields. Thus, you may create the Measure "Length 1" with "mm" and "cm" as Units and the Measure "Length 2" with "mm", "m" and "km" as Units and assign each Measure to different attributes of fields.
 
-4b) Global default unit for some measure is always the same as the default unit for the system locale (= which is assigned to the system) for that measure.
+After Measure is created you can create and assign Units to it. These are visible it the "Units" panel.
 
-5) For each locale you can (not must) configure, which units should the user be able to use (e.g. for length "miles", but not "kilometers"). If you create a new measure relation for some locale the list of units and default units are mandatory fields. Default unit must only be chosen from the chosen units.
+![measures-units](../_assets/admin-guide/measure-unit-conversion/measures-units.png)
 
-5a) Each measure can be linked with any locale only once.
+To create a new Unit, click on the "+" icon in the top right corner of this panel. 
 
-5b) Locale is an optional field for a user.
+![unit-create](../_assets/admin-guide/measure-unit-conversion/unit-create.png)
 
-5f) If no measure record is linked with some locale, no filter applies and all units should be available for a user with that locale. This is valid also for a default locale.
+Here you can 
+- define the name for the new Unit e.g. "mm" or "cm", 
+- set the "Multiplier", which is used for automatic unit conversion and 
+- choose the Unit to which the current Unit should be automatically converted.
 
-6) Add the possibility to set the checkbox "Default | Standard" (for setting the global default unit for the measure), "Multiplier | Multiplikator" as float, "Convert to | Konvertieren zu" as a dropdown in the relation to "Unit" entity. 
+If you create very first Unit for some Measure, this Unit is automatically marked as "default", and its "Multiplier" is set to "1".
 
-Only units, selected for the locale of the current user can be chosen via frontend and via API. If nothing is selected for the locale all units are available.
+> If you want to store full unit names e.g. "meter" you need to add the field "description" to the Detail (small) Layout for Units and use this field for it. You can also create new field for that via "Entity Manager".
 
-7) In dropdown "Convert to" I can choose via dropdown, which unit corresponds with the current unit.
+To edit a data record, use its menu. On the "Edit View" you can set a new Unit as a "default" Unit. In this case its "Multiplier" is set to 1, and all other "Multipliers" will be adjusted accordingly. The Unit marked as "default" cannot be deleted.
 
-9) For the default unit the multiplier is always 1 and cannot be changed. Only one unit can be set as the default unit. Each measure always should have the default unit. Thus  the first unit added for some measure should always be automatically marked as default value. 
+![unit-create](../_assets/admin-guide/measure-unit-conversion/unit-edit.png)
 
-9a) If I want to set the current unit as the new default unit, its multiplier should be set to 1 and multipliers of all other units should be recalculated respectively.
+> "Default" Unit is a base Unit which the calculation for all other Units for the current Measure is based on. This is the only purpose of this setting.
 
-9b) The Unit marked as default cannot be deleted. It is not possible to delete the last unit for the value (which should be marked as default).
+## Localized Measure Units
+In AtroCore you can create and use multiple Locales. For each Locale, you may decide whether you want to enable Measure Unit localization or not. This is done by adding a measure to the Locale and setting which units should be available for this measure. Click on the "Select" button for that.
 
-10) If a user creates a new attribute or field of type unit, for the default option all units are available. While creating attributes of field value default value is determined based on recalculation principles.
+![locale-measure-select](../_assets/admin-guide/measure-unit-conversion/locale-measure-select.png)
 
-11) The unit attribute or unit field value is always stored as shown. 
+In the popup window select the measures for which you want to enable localized units and click on the button "Select".
 
-12) The user always sees the value as it is stored, if this unit is available for him. Otherwise he see the value 
-in unit which is set as "Convert to", for the stored unit, provided this unit is available for his locale, if not available than
-in unit which is set as default unit for this measure for his locale
+![locale-measure-select-popup](../_assets/admin-guide/measure-unit-conversion/locale-measure-select-popup.png)
 
-12a) If the user will open the product for editing and will not change the value of this unit field or attribute the database will keep the value which is stored (he sees the value in one unit and it is still stored in some other unit).
+After a Measure is added it will appear in the "Measures" panel for your Locale. 
 
-Example: User A sees only kilometers and meters (default for his locale), User B sees only miles (default for his locale, set as "Convert to'' for kilometers). User A saves the value 10 km. User B sees this value as 6.21371 miles. User B changes the value to 10 miles (he sees the value as 10 miles, value is stored as 16,0934 km, if kilometer is set as “Convert to” for miles, if “Convert to” is not set, than 16093,4 m is stored). User A sees this value then as it is stored. 
+![locale-measures-list](../_assets/admin-guide/measure-unit-conversion/locale-measures-list.png)
 
-13) API should always return unit value in the “local unit”, it means value is returned as it is stored, if this unit is available for the locale or the API user. Otherwise the value is returned
-in unit which is set as "Convert to", for the stored unit, provided this unit is available for the locale of this user, if not available than
-in the unit which is set as the default unit for this measure for the locale of the API user.
+Per default all Units for the Measure are automatically added. To remove some or them open the appropriate data record for editing.
 
-ADDITIONALLY the value is also returned in all other units of this measure. The “Convert to” unit of the unit determined in the previous step (“local unit”) is always returned on THE FIRST PLACE of these additional values, if “Convert to” is set for this “local unit”.
+![locale-measures-list](../_assets/admin-guide/measure-unit-conversion/locale-measures-edit.png)
+
+Here you need to leave only Units, which should be available for the current Locale. You must also choose a default Measure Unit for the Locale.
+
+> Example: In you want that some user should be able only to work with "cm", "dm" and "mm" as Units for the Measure "Length" you need to enable only these units for the Locale of this user.
+
+### Automatic Unit Conversion
+
+"Multiplier" is used to automatically convert the values. It defines how many current Units match 1 default Unit.
+
+> Example: You have "mm" set as "default" Unit and its "Multiplier" is set to "1". You want to add "cm", its "Multiplier" should be set to 0,1 because 1 mm = 0,1 cm.
+
+The values for the fields and attributes of type "Unit" are always stored as shown. 
+
+The user always sees the value as it is stored, if this unit is available for his Locale (if no Locale is set for system, system assumes the user has the same Locale as the system). Otherwise, he sees the value in Unit which is set as "Convert to" Unit for the stored Unit, provided this Unit is available for his Locale. If this Unit is not available than the user sees the value in Unit which is set as "default" unit for this Measure for his Locale.
+
+> Example: User A sees only kilometers (miles are set as "Convert to" for kilometers) and meters (default for his Locale), User B sees only miles (default for his Locale). User A saves the value "10 km". User B sees this value as "6.21371 miles". User B changes the value to 10 miles (value "10 miles" is stored). User A sees this value as "16093,4 m". 
+
+### API
+
+API returns additionally the values for all fields and attributes of type "unit" in all Units of their Measure.
+
+
