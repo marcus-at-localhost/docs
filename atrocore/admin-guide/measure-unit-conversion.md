@@ -58,7 +58,7 @@ Here you need to leave only Units, which should be available for the current Loc
 
 > Example: In you want that some user should be able only to work with "cm", "dm" and "mm" as Units for the Measure "Length" you need to enable only these units for the Locale of this user.
 
-### Automatic Unit Conversion
+## Automatic Unit Conversion
 
 "Multiplier" is used to automatically convert the values. It defines how many current Units match 1 default Unit.
 
@@ -70,7 +70,7 @@ The user always sees the value as it is stored, if this unit is available for hi
 
 > Example: User A sees only kilometers (miles are set as "Convert to" for kilometers) and meters (default for his Locale), User B sees only miles (default for his Locale). User A saves the value "10 km". User B sees this value as "6.21371 miles". User B changes the value to 10 miles (value "10 miles" is stored). User A sees this value as "16093,4 m". 
 
-### API
+## API
 
 API returns additionally the values for all fields and attributes of type "unit" in all Units of their Measure.
 
