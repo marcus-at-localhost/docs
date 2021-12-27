@@ -10,3 +10,4 @@
     - [PDF Generator](./pdf-generator.md)
     - [Pricing](./pricing.md)
     - [Product Bundles](./product-bundles.md)
+    - [Product Preview](./product-preview.md)

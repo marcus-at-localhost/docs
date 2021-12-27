@@ -18,3 +18,4 @@
    - [PDF Generator](/modules/pdf-generator.md)
    - [Pricing](/modules/pricing.md)
    - [Product Bundles](/modules/product-bundles.md)
+   - [Product Preview](/modules/product-preview.md)
