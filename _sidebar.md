@@ -17,3 +17,4 @@
    - [Ownership Inheritance](/modules/ownership-inheritance.md)
    - [PDF Generator](/modules/pdf-generator.md)
    - [Pricing](/modules/pricing.md)
+   - [Product Bundles](/modules/product-bundles.md)

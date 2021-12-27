@@ -9,3 +9,4 @@
 - [Ownership Inheritance](./ownership-inheritance.md)
 - [PDF Generator](./pdf-generator.md)
 - [Pricing](./pricing.md)
+- [Product Bundles](./product-bundles.md)
