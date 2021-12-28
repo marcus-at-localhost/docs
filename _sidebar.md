@@ -20,3 +20,5 @@
    - [Product Bundles](/modules/product-bundles.md)
    - [Product Preview](/modules/product-preview.md)
    - [Product Variants](/modules/product-variants.md)
+   - [Revisions](/modules/revisions.md)
+   - [Workflows](/modules/workflows.md)
