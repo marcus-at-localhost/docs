@@ -19,3 +19,4 @@
    - [Pricing](/modules/pricing.md)
    - [Product Bundles](/modules/product-bundles.md)
    - [Product Preview](/modules/product-preview.md)
+   - [Product Variants](/modules/product-variants.md)
