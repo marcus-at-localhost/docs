@@ -221,7 +221,9 @@ Configuration for the fields and attributes of type "Asset" is the same. Your fi
 #### Setting Main Image for Products
 If you are importing the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". 
 
-> Please note if you want to import other assets together with the Main Image, create an import rule for the assets, and make sure your Main Image URL is also provided there. In other case it is possible, that the rule for the Main Image will create it, and the rule for assets will remove the relation with the Main Image, because it is not mentioned there.
+> Please note if you want to import other assets together with the Main Image, you don't need to provide the URL for your Main Image there, it should be provided only for the field "Main Image". 
+
+Marking an Image as a Main Image for a certain channel via import is currently not possible.
 
 
 Import of assets via local server path is currently not supported.
