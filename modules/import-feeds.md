@@ -211,6 +211,8 @@ The second and the third product will be linked with "Category2" and "Category3"
 
 If any of the multiple relations cannot be found and the data record cannot be created (assuming the checkbox `create if not exists` is set) the whole row is not imported. If the option `create if not exists` is not set, all not found relations are ignored.
 
+> Please note, for all relations including Assets the system expects all related entities to be always provided, in other case not provided relations will be unlinked. Example: Product A is linked with the Category A, via import feed your provide Category B and Category C as relations for this product. After the import Category B and C will be linked with the Product A, and Category C will be unlinked, because it was not provided in the import file.
+
 ### Related Assets, Asset Fields and Attributes
 Images, videos, and other types of files are assets. Asset can be configured for import the same way as a relation. If you want to import assets from provided URLs, you need to choose URL as related entity field. If you have images in multiple columns create a mapping rule for each column separately. If you use DAM module assets for your files will be created directly in DAM and will be linked with appropriate products.
 
@@ -219,11 +221,15 @@ Images, videos, and other types of files are assets. Asset can be configured for
 Configuration for the fields and attributes of type "Asset" is the same. Your files will be stored as assets in the DAM only if the DAM module is installed.
 
 #### Setting Main Image for Products
-If you are importing the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". 
+It is possible to import images and other assets via providing URLs and link them directly with products. Create an import feed for product entity for this. Configurator rules for Assets should use the field "Assets".
 
-> Please note if you want to import other assets together with the Main Image, you don't need to provide the URL for your Main Image there, it should be provided only for the field "Main Image". 
+If you want to import the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". 
 
-Marking an Image as a Main Image for a certain channel via import is currently not possible.
+If you want to import multiple assets and link them with product and the Asset for the field "Main Image" is not provided, you still need to provide this as asset relation, because in other case it will be unlinked from your product and will no longer be marked as Main Image.
+
+If you want to import other assets together with the Main Image, you don't need to provide the URL for your Main Image there, it should be provided only for the field "Main Image", but if you want to import Main Image and assign a certain Asset Type to it, you need to provide it within other asset relations, together with the type to be set for this Main Image. 
+
+> Marking an Image as a Main Image for a certain channel via import is currently not possible.
 
 
 Import of assets via local server path is currently not supported.
