@@ -14,7 +14,7 @@
       - [Module Installation](/atrocore/admin-guide/module-installation.md)
       - [Multilingualism](/atrocore/admin-guide/multilingualism.md)
       - [Measure Unit Conversion](/atrocore/admin-guide/measure-unit-conversion.md)
-      - [Database Rebuild](/atrocore/admin-guide/correcting-errors.md)
+      - [Correcting Errors](/atrocore/admin-guide/correcting-errors.md)
       - [Web Server Preparation: Apache](/atrocore/admin-guide/web-server-preparation-apache.md)
       - [Web Server Preparation: Nginx](/atrocore/admin-guide/web-server-preparation-nginx.md)
    - [User Guide](/atrocore/user-guide/)

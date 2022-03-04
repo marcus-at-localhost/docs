@@ -5,6 +5,6 @@
 - [Module Installation](module-installation.md)
 - [Multilingualism](multilingualism.md)
 - [Measure Unit Conversion](measure-unit-conversion.md)
-- [Database Rebuild](correcting-errors.md)
+- [Correcting Errors](correcting-errors.md)
 - [Web Server Preparation: Apache](web-server-preparation-apache.md)
 - [Web Server Preparation: Nginx](web-server-preparation-nginx.md)
