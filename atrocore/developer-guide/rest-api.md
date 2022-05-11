@@ -16,7 +16,7 @@ The path to the API in AtroCore is: `/api/v1/`. Only this path can be used for y
 * [How to select specific fields?](https://youtu.be/i7o0aENuyuY)
 * [How to filter data records?](https://youtu.be/irgWkN4wlkM)
 
-## REST API documentation
+## API Documentation
 REST API documentation is generated for each project automatically, based on your configurations and modules you are using. 
 
 To access it please go to `https://address_of_your_atrocore/apidocs/`.
