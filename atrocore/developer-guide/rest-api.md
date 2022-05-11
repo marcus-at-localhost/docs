@@ -21,7 +21,7 @@ REST API documentation is generated for each project automatically, based on you
 
 To access it please go to `https://address_of_your_atrocore/apidocs/`.
 
-For example the documentation for demo.atropim.com is available here: [https://demo.atropim.com/apidocs/](https://demo.atropim.com/apidocs/)
+For example the documentation for our public demo instance (demo.atropim.com) is available here: [https://demo.atropim.com/apidocs/](https://demo.atropim.com/apidocs/)
 
 ## 1. Step: Authentication
 
