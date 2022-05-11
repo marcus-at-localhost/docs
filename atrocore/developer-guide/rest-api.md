@@ -11,6 +11,11 @@ The path to the API in AtroCore is: `/api/v1/`. Only this path can be used for y
 
 > We recommend to create a **separate API user** with specific rights (configure and assign a role to him) and use this user for API calls.
 
+## Video Tutorials
+* [How to authorize?](https://youtu.be/GWfNRvCswXg)
+* [How to select specific fields?](https://youtu.be/i7o0aENuyuY)
+* [How to filter data records?](https://youtu.be/irgWkN4wlkM)
+
 ## REST API documentation
 REST API documentation is generated for each project automatically, based on your configurations and modules you are using. 
 
@@ -35,10 +40,7 @@ Example of GET API request:
 ```
 GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
 ```
-## Video Tutorials
-* [How to authorize?](https://youtu.be/GWfNRvCswXg)
-* [How to select specific fields?](https://youtu.be/i7o0aENuyuY)
-* [How to filter data records?](https://youtu.be/irgWkN4wlkM)
+
 
 
 
