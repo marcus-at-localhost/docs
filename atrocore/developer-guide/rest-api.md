@@ -35,6 +35,10 @@ Example of GET API request:
 ```
 GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
 ```
+## Video Tutorials
+* [How to authorize?](https://youtu.be/GWfNRvCswXg)
+* [How to select specific fields?](https://youtu.be/i7o0aENuyuY)
+* [How to filter data records?](https://youtu.be/irgWkN4wlkM)
 
 
 
