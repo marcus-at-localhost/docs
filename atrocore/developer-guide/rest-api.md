@@ -9,7 +9,7 @@ All requests needs to have the header: `Content-Type: application/json`.
 
 The path to the API in AtroCore is: `/api/v1/`. Only this path can be used for your API requests.
 
-> It's recommended to create a **separate API user** with specific rights (configure and assign a role to him) and use this user for API calls.
+> We recommend to create a **separate API user** with specific rights (configure and assign a role to him) and use this user for API calls.
 
 ## REST API documentation
 REST API documentation is generated for each project automatically, based on your configurations and modules you are using. 
