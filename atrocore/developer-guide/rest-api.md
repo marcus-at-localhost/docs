@@ -1,6 +1,6 @@
 # REST API
 
-AtroCore is an API-centric application, so a frontend uses REST API to connect with a backend. Our REST API is based on OpenAPI (Swagger), so you can use [generate your client](https://openapi-generator.tech/docs/generators/) automatically.
+AtroCore is an API-centric application, so a frontend uses REST API to connect with a backend. Our REST API is based on OpenAPI (Swagger), so you can [generate your client](https://openapi-generator.tech/docs/generators/) automatically.
 
 All operations you perform using UI can be performed via API requests using the programing language of your choice. 
 You can learn how API works if you trace what's going in the network tab in your **browser console** (press F12 key to open the console).
