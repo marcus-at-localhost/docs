@@ -9,12 +9,6 @@ All requests needs to have the header: `Content-Type: application/json`.
 
 The path to the API in AtroCore is: `/api/v1/`. Only this path can be used for your API requests.
 
-Example of GET API request: 
-
-```
-GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
-```
-
 > It's recommended to create a **separate API user** with specific rights (configure and assign a role to him) and use this user for API calls.
 
 ## REST API documentation
@@ -35,6 +29,13 @@ For obtaining access token you need to send GET request to `/api/v1/App/user` us
 To see which requests are available read the documentation for your AtroCore instance. 
 
 To access it please go to `https://address_of_your_atrocore/apidocs/`.
+
+Example of GET API request: 
+
+```
+GET https://address_of_your_atrocore/api/v1/Product/2d643ca0gff7rh7c6
+```
+
 
 
 
