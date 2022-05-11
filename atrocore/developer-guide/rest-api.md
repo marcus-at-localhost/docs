@@ -1,10 +1,9 @@
 # REST API
 
-AtroCore is an API-centric application, so a frontend uses REST API to connect with a backend. 
+AtroCore is an API-centric application, so a frontend uses REST API to connect with a backend. Our REST API is based on OpenAPI (Swagger), so you can use [generate your client](https://openapi-generator.tech/docs/generators/) automatically.
+
 All operations you perform using UI can be performed via API requests using the programing language of your choice. 
 You can learn how API works if you trace what's going in the network tab in your **browser console** (press F12 key to open the console).
-
-Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format.
 
 All requests needs to have the header: `Content-Type: application/json`. 
 
@@ -33,7 +32,9 @@ For obtaining access token you need to send GET request to `/api/v1/App/user` us
 
 ## 2. Step: Making requests
 
-To see which requests are available read the documentation for your AtroCore instance. To access it please go to `https://address_of_your_atrocore/apidocs/`.
+To see which requests are available read the documentation for your AtroCore instance. 
+
+To access it please go to `https://address_of_your_atrocore/apidocs/`.
 
 
 
