@@ -129,7 +129,7 @@ Here is the example of the view `client/modules/example-module/src/views/test/re
         })
     );
 ```
-This ist the example of template file for the Detail View `client/modules/example-module/res/templates/test/record/detail.tpl`:
+This is an example of template file for the Detail View `client/modules/example-module/res/templates/test/record/detail.tpl`:
 
 ```
     <div class="some-class">{{key1}}</div>
