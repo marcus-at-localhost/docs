@@ -69,16 +69,15 @@ The following settings are available here:
     - *Create, Update and Delete* – full synchronization will be done.
 
 
-### File Settings
+### Import Data Settings
 
-The import file parameters are configured on the `FILE PROPERTIES` panel:
+The import data parameters are configured on the `IMPORT DATA SETTINGS` panel:
 
 ![Import feed cfg file](_assets/import-feeds/import-feeds-create-file-properties.png)
 
+- **Format** - define the import data format. It can be either CSV or Excel.
 - **File** – here you can upload the file which is to be imported or its shortened version (as a sample), which will be used for the configuration. The file should be UTF-8 encoded. 
 - **Header row** – activate the checkbox if the column names are included in the import file or leave it empty if the file to be imported has no header row with column names.
-- **Thousand separator** –  define the symbol, which is used as thousand separator. This parameter is optional. The numerical values without thousand separator will be also imported (eg both values 1234,34 and 1.234,34 will be imported, if "." is defined as a thousand separator).
-- **Decimal mark** – select the used decimal mark, usually `.` or `,` should be defined here.
 - **Field delimiter** – select the preferred field delimiter to be used in the CSV import file, possible values are `,`, `;`,`\t`, `|`.
 - **Text qualifier** – select the preferred separator of the values within a cell: single or double quotes can be selected.
 
@@ -90,9 +89,11 @@ The next panel is the settings panel:
 
 - **Entity** – select the desired entity for the imported data from the drop-down list of all entities available in the system.
 - **Unused Columns** – this field is initially empty. After save you will see here the list of available unmapped columns.
-- **Field delimiter for relation** – field delimiter, which is used to separate fields in the relation, default value is "|".
-- **Data record delimiter** – is the delimiter to split multiple values (eg for "multienum" or "array" fields and attributes) or multiple related records.
+- **List Value Separator** – this field is used to specify the symbol to separate the values in list.
 - **Mark for a non-linked attribute** – this mark is only available for the product entity. This symbol marks attribute which should not be linked to the respective product.
+- **Field delimiter for relation** – field delimiter, which is used to separate fields in the relation, default value is "|".
+- **Thousand separator** –  define the symbol, which is used as thousand separator. This parameter is optional. The numerical values without thousand separator will be also imported (eg both values 1234,34 and 1.234,34 will be imported, if "." is defined as a thousand separator).
+- **Decimal mark** – select the used decimal mark, usually `.` or `,` should be defined here.
 - **Empty Value** – This symbol will be interpreted as "empty" value additionally to the empty cell, eg "" and "none" will be interpreted as "", if you define "none" as an empty value.
 - **Null value** – this value will be interpreted as "NULL" value.
 
@@ -105,7 +106,7 @@ After the file is uploaded and file settings are properly configured you should 
 
 If the `Unused Columns` field is empty after saving your feed, you should check your field delimiter for correctness. If some column names have single or double quotes you may have set the wrong text qualifier.
 
-> Please, note that the defined `field delimiter`, `data record delimiter`, `empty value`, `null value`, `thousand separator`, `decimal mark`, `text qualifier` and `mark for a non-linked attribute` symbols must be different.
+> Please, note that the defined `field delimiter`, `list value separator`, `empty value`, `null value`, `thousand separator`, `decimal mark`, `text qualifier` and `mark for a non-linked attribute` symbols must be different.
 
 ## Configurator
 Configurator can be used after the import feed is created. Initially this panel is empty. This panel displays mapping rules for your data import.
@@ -213,26 +214,6 @@ If any of the multiple relations cannot be found and the data record cannot be c
 
 > Please note, for all relations including Assets the system expects all related entities to be always provided, in other case not provided relations will be unlinked. Example: Product A is linked with the Category A, via import feed your provide Category B and Category C as relations for this product. After the import Category B and C will be linked with the Product A, and Category C will be unlinked, because it was not provided in the import file.
 
-### Related Assets, Asset Fields and Attributes
-Images, videos, and other types of files are assets. Asset can be configured for import the same way as a relation. If you want to import assets from provided URLs, you need to choose URL as related entity field. If you have images in multiple columns create a mapping rule for each column separately. If you use DAM module assets for your files will be created directly in DAM and will be linked with appropriate products.
-
-![Configurator assets](_assets/import-feeds/import-feeds-configurator-assets.png)
-
-Configuration for the fields and attributes of type "Asset" is the same. Your files will be stored as assets in the DAM only if the DAM module is installed.
-
-It is possible to import images and other assets via providing URLs and link them directly with products. Create an import feed for product entity for this. Configurator rules for Assets should use the field "Assets" and for Main Image – the field "Main Image".
-
-If you want to import the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". The Configurator Rule for Main Image should be created after the rule for all other assets, in other case the Main Image will not be imported. Configuration Rule for "Main Image" is the same as for "Assets" Relation. It is always better to import all the assets and the Main Image via single import job, in other case the importing order is important (see details bellow). 
-
-If you import some assets without assets for Main Images and your products have already Main Images assigned to them, these will be unlinked. To avoid this you need to include a Configuration Rule for the assets which are Main Images. The reason for it is simple, the system (imports and) links only assets to the products which are provided in your import file, all other assets are unlinked. So if you have some assets assigned to you products and will import products with completely different assets, all previously linked assets will be unlinked.
-
-If you create a rule only for Main Images and there will be no rule for other assets, assets for the Main Images will be created and linked additionally. All other assets will be preserved. The importing order is important. You can import assets and then import Main Images - in this case all imported assets will be linked to the products. If you will import Main Images initially and than all other assets, without using a rule for assets, which are assigned as Main Images, all the Main Images will be unlinked.
-
-> Marking an Image as a Main Image for a certain channel via import is currently not possible.
-
-
-Import of assets via local server path is currently not supported.
-
 ## Running Import Feed
 
 Click on `Import` button to import the data from the file, which you have uploaded during configuration of your import feed (which is a sample file). 
@@ -266,11 +247,6 @@ Results of the data import can be viewed in two ways:
 - on the "Import Jobs List Page", which shows details on all import jobs performed in the system via import feeds. To open this page, click on the `Export Results` in your main navigation 
 
 ![import-results-list](_assets/import-feeds/import-feeds-import-results-list.png)
-
-or use the button `Show Full List` on your "Import Jobs Panel".
-
-![Queue manager](_assets/import-feeds/import-feeds-import-results-show-full-list.png)
-
 
 
 The Import Jobs details contain the following information:
