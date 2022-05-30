@@ -267,7 +267,6 @@ Results of the data import can be viewed in two ways:
 
 ![import-results-list](_assets/import-feeds/import-feeds-import-results-list.png)
 
-
 The Import Jobs details contain the following information:
 
 - **Name** – the Import Job record name, which is generated automatically based on the date and time of the import job start. Click the Import Job record name to open its detail view page.
