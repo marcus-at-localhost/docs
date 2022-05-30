@@ -214,6 +214,25 @@ If any of the multiple relations cannot be found and the data record cannot be c
 
 > Please note, for all relations including Assets the system expects all related entities to be always provided, in other case not provided relations will be unlinked. Example: Product A is linked with the Category A, via import feed your provide Category B and Category C as relations for this product. After the import Category B and C will be linked with the Product A, and Category C will be unlinked, because it was not provided in the import file.
 
+### Related Assets, Asset Fields and Attributes
+Images, videos, and other types of files are assets. Asset can be configured for import the same way as a relation. If you want to import assets from provided URLs, you need to choose URL as related entity field. If you have images in multiple columns create a mapping rule for each column separately. If you use DAM module assets for your files will be created directly in DAM and will be linked with appropriate products.
+
+![Configurator assets](_assets/import-feeds/import-feeds-configurator-assets.png)
+
+Configuration for the fields and attributes of type "Asset" is the same. Your files will be stored as assets in the DAM only if the DAM module is installed.
+
+It is possible to import images and other assets via providing URLs and link them directly with products. Create an import feed for product entity for this. Configurator rules for Assets should use the field "Assets" and for Main Image – the field "Main Image".
+
+If you want to import the product data and need to mark some asset as a Global Main Image, the URL of this image should be provided for the Product Field "Main Image". The Configurator Rule for Main Image should be created after the rule for all other assets, in other case the Main Image will not be imported. Configuration Rule for "Main Image" is the same as for "Assets" Relation. It is always better to import all the assets and the Main Image via single import job, in other case the importing order is important (see details bellow). 
+
+If you import some assets without assets for Main Images and your products have already Main Images assigned to them, these will be unlinked. To avoid this you need to include a Configuration Rule for the assets which are Main Images. The reason for it is simple, the system (imports and) links only assets to the products which are provided in your import file, all other assets are unlinked. So if you have some assets assigned to you products and will import products with completely different assets, all previously linked assets will be unlinked.
+
+If you create a rule only for Main Images and there will be no rule for other assets, assets for the Main Images will be created and linked additionally. All other assets will be preserved. The importing order is important. You can import assets and then import Main Images - in this case all imported assets will be linked to the products. If you will import Main Images initially and than all other assets, without using a rule for assets, which are assigned as Main Images, all the Main Images will be unlinked.
+
+> Marking an Image as a Main Image for a certain channel via import is currently not possible.
+
+Import of assets via local server path is currently not supported.
+
 ## Running Import Feed
 
 Click on `Import` button to import the data from the file, which you have uploaded during configuration of your import feed (which is a sample file). 
