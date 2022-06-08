@@ -54,7 +54,7 @@ The product status helps to control the process of preparing product information
 
 With the filters, each user can select the products on which descriptions he has to work on according to the corresponding status. The employee who has to check the descriptions can filter products by the status `Prepared` and check them. The employees who have to improve the product descriptions can filter the products by status `NOT Ready`.
 
-For filtering according to a certain status you have to select `Product Status` in the filters, enter the corresponding value and click on the `Search` button. To reset the filter settings, you have to click the `Reset` button - this will reset all filter and sorting settings. If it is necessary to remove only one of some filters, you have to click on `x` next to the required filter and then on the button ` Search`.
+For filtering according to a certain status you have to select `Product Status` in the filters, enter the corresponding value and click on the `Search` button. To reset the filter settings, you have to click the `Reset` button - this will reset all filter and sorting settings. If it is necessary to remove only one of some filters, you have to click on `x` next to the required filter and then on the button `Search`.
 
 ![](../_assets/how-tos/how-to-use-the-workflows/image43.png)
 
