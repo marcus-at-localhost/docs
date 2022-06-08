@@ -24,7 +24,7 @@ In our example, we consider a simple workflow that will suit the majority of use
 
 The flowchart shows that the usual workflow is as follows: Draft → In Progress → Prepared → Reviewed → Ready → Published. If the review reveals that something is wrong with the product data, the product status is set to `Rejected`. All possible transitions are marked with arrows.
 
-The colleagues who are working on the preparation of the product information can use the `Product Status` and ` ToDos` fields as filters to quickly get an overview of which products still need to be done. You can also assign the product entries to keep track of who is currently “on the ball”.
+The colleagues who are working on the preparation of the product information can use the `Product Status` and `ToDos` fields as filters to quickly get an overview of which products still need to be done. You can also assign the product entries to keep track of who is currently “on the ball”.
 
 In the `Channels` field, it should be noted via which channels the product description was published.
 
@@ -54,7 +54,7 @@ The product status helps to control the process of preparing product information
 
 With the filters, each user can select the products on which descriptions he has to work on according to the corresponding status. The employee who has to check the descriptions can filter products by the status `Prepared` and check them. The employees who have to improve the product descriptions can filter the products by status `NOT Ready`.
 
-For filtering according to a certain status, you have to select `Product Status` in the filters, enter the corresponding value and click on the `Search` button. To reset the filter settings, you have to click the `Reset` button - this will reset all filter and sorting settings. If it is necessary to remove only one of some filters, you have to click on `x` next to the required filter and then on the button ` Search`.
+For filtering according to a certain status, you have to select `Product Status` in the filters, enter the corresponding value and click on the `Search` button. To reset the filter settings, you have to click the `Reset` button - this will reset all filter and sorting settings. If it is necessary to remove only one of some filters, you have to click on `x` next to the required filter and then on the button `Search`.
 
 ![](../_assets/how-tos/how-to-use-the-workflows/image43.png)
 
@@ -64,7 +64,7 @@ The administrator can change the available status values and their arrangement i
 
 `ToDos` is a field of type `Multi-Enum`. In contrast to the values of the `Status` field, of which the product can only have one at a certain point in time, the` ToDos` field can have several values at the same time that are not competing with each other. For example, a description can only have technical information, or only marketing information, or both.
 
-These values can be linked to a specific phase of the workflow and also be completely independent of it. For example, if the product description has been prepared (status: `Prepared`), all values in the` ToDos` field must be removed. For example, the `ToDos` field can contain the value ` To be tagged`, which means that this product still needs to be tagged.
+These values can be linked to a specific phase of the workflow and also be completely independent of it. For example, if the product description has been prepared (status: `Prepared`), all values in the `ToDos` field must be removed. For example, the `ToDos` field can contain the value `To be tagged`, which means that this product still needs to be tagged.
 
 `ToDos` help with the product description because they characterize the state of the product description in more detail than the product status.
 
