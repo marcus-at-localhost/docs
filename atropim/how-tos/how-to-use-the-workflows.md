@@ -78,8 +78,8 @@ The Multi-Enum fields help users to orientate themselves more easily in the larg
 
 ## Use of additional fields
 
-Any additional fields can be created in the system to help users organize their work on the product descriptions. The best types of these fields are `Enum` (selection lists) and ` Multi-Enum` (multiple selection lists).
+Any additional fields can be created in the system to help users organize their work on the product descriptions. The best types of these fields are `Enum` (selection lists) and `Multi-Enum` (multiple selection lists).
 
-In the proposed workflow, we recommend creating the `Channels` field of the ` Multi-Enum` type in order to store the information on which channel the corresponding description was published. 
+In the proposed workflow, we recommend creating the `Channels` field of the `Multi-Enum` type in order to store the information on which channel the corresponding description was published. 
 
 The administrator can create additional fields and specify the values for them.
